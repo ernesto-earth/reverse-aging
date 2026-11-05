@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Reverse Aging Routinen – Handy Überblick</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#14201C}a:hover{color:#C2410C}
+.seg{flex:1;font:inherit;font-size:14px;font-weight:600;border:0;border-radius:8px;min-height:44px;cursor:pointer}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 0 6px;min-height:44px;font-size:11px;font-weight:600;text-decoration:none;color:#B8C2BC}
+.tag{display:inline-block;font-size:11px;font-weight:600;padding:2px 6px;border-radius:4px;white-space:nowrap}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; background: #F3F4EF; font-family: Inter, system-ui, sans-serif; color: #14201C">
+
+<header style="background: #14201C; padding: 16px 20px 18px">
+<div style="font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: .04em; color: #FFFFFF">REVERSE AGING <span style="color: #F08A5D">ROUTINEN</span></div>
+<p style="margin: 6px 0 0; font-size: 14px; color: #D5DBD7">Stark älter werden – als Routine.</p>
+</header>
+
+<div style="padding: 14px 16px 0">
+<div role="tablist" aria-label="Rhythmus" style="display: flex; gap: 4px; background: #E4E7E0; padding: 4px; border-radius: 11px">
+<sc-for list="{{tabs}}" as="t" hint-placeholder-count="3">
+<button class="seg" role="tab" aria-selected="{{t.sel}}" onClick="{{t.pick}}" style="{{t.style}}">{{t.label}}</button>
+</sc-for>
+</div>
+
+<div style="margin-top: 14px; background: #FFFFFF; border-radius: 14px; padding: 16px 18px; border-top: 6px solid {{color}}">
+<div style="display: flex; justify-content: space-between; align-items: baseline">
+<h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; color: {{color}}">{{title}}</h2>
+<span style="font-size: 12px; color: #4A5752">{{hint}}</span>
+</div>
+<sc-for list="{{items}}" as="i" hint-placeholder-count="5">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 11px 0; border-top: 1px solid #E4E7E0; font-size: 15px">
+<span style="display: flex; gap: 10px; align-items: center"><span style="width: 26px; height: 26px; flex: none; border-radius: 50%; background: #F3F4EF; font-size: 12px; font-weight: 700; display: grid; place-items: center">{{i.n}}</span>{{i.t}}</span>
+<span style="font-size: 13px; font-weight: 600; color: #4A5752; text-align: right">{{i.v}}</span>
+</div>
+</sc-for>
+<a href="{{link}}" style="display: block; margin-top: 8px; font-size: 14px; font-weight: 600; text-decoration: none">{{linkLabel}} →</a>
+</div>
+
+<a href="#" style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px; background: #14201C; color: #FFFFFF; border-radius: 12px; padding: 14px 16px; text-decoration: none; font-size: 14px"><span><span style="display: block; font-size: 11px; color: #B8C2BC">Hintergrund</span><b>Warum das wirkt · Quellen</b></span><span style="color: #F08A5D">→</span></a>
+</div>
+
+<nav aria-label="Hauptnavigation" style="position: absolute; left: 0; right: 0; bottom: 0; display: flex; background: #14201C; padding: 0 6px 14px">
+<a class="tab" href="MobilStart.dc.html" aria-current="page" style="color: #FFFFFF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Überblick</a>
+<a class="tab" href="#"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></svg>Morgen</a>
+<a class="tab" href="MobilKraft.dc.html"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 7v10M18 7v10M3 10v4M21 10v4M6 12h12"/></svg>Kraft</a>
+<a class="tab" href="#"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Tests</a>
+<a class="tab" href="#"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg>Mehr</a>
+</nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+constructor(p) { super(p); this.state = { r: 'd' }; }
+renderVals() {
+const R = {
+d: { title: 'Täglich', hint: 'über den Vormittag', color: '#C2410C', link: '#', linkLabel: 'Zur Morgenroutine',
+items: [['1','Ein Glas Wasser','sofort'],['2','Tageslicht draußen','~30 min'],['3','Muskeln fordern','15–30 min'],['4','Protein verteilen','2 Mahlzeiten'],['5','Aktiv denken','im Tag']] },
+w: { title: 'Wöchentlich', hint: 'Beispielwoche', color: '#1F5F55', link: 'MobilKraft.dc.html', linkLabel: 'Zum Kraftplan',
+items: [['K','Kraft, Ganzkörper','2 × 30–45 min'],['A','Ausdauer moderat','150–300 min'],['G','Gleichgewicht ab 65','3 Tage'],['R','Ruhetag dazwischen','mind. 1'],['S','Schlaf','7–9 h']] },
+q: { title: 'Pro Quartal', hint: 'etwa 10 Minuten', color: '#2B4C7E', link: '#', linkLabel: 'Zu den Tests',
+items: [['1','30-s-Aufstehtest','Wdh. zählen'],['2','4-Stufen-Balance','je 10 s'],['3','Fünfmal Aufstehen','unter 15 s'],['4','Gehtempo 4 m','über 0,8 m/s'],['✎','Werte notieren','1 Zeile']] }
+};
+const cur = R[this.state.r];
+const tabs = [['d','Heute'],['w','Woche'],['q','Quartal']].map(([id,label]) => {
+const sel = this.state.r === id;
+return { label, sel: sel ? 'true' : 'false', pick: () => this.setState({ r: id }),
+style: sel ? 'background: #14201C; color: #FFFFFF' : 'background: transparent; color: #14201C' };
+});
+return { tabs, title: cur.title, hint: cur.hint, color: cur.color, link: cur.link, linkLabel: cur.linkLabel,
+items: cur.items.map(([n,t,v]) => ({ n, t, v })) };
+}
+}
+</script>
+</body>
+</html>

@@ -1,40 +1,46 @@
-# heger.earth – automatisches Deployment
+# Routinen – „Reverse Aging – Routinen für ein starkes Älterwerden“
 
-Jeder Ordner unter `sites/` wird automatisch auf heger.earth veröffentlicht:
+Website: **http://heger.earth/reverse-aging/**
 
-| Ordner im Repo     | Adresse                     |
-|--------------------|-----------------------------|
-| `sites/reverse-aging/` | http://heger.earth/reverse-aging |
-| `sites/<name>/`    | https://heger.earth/<name>  |
+Der Projektordner `a.5. Projekte/Routinen` ist die einzige Quelle. Das öffentliche GitHub-Repo
+`ernesto-earth/reverse-aging` ist sein Spiegel (ohne die lokalen Teile, siehe unten) und veröffentlicht
+die Seite automatisch. Keine Abhängigkeit zu Claude oder ChatGPT.
 
-Bei jedem Push auf `main` lädt die GitHub Action `Deploy` die Seiten per FTPS (mit `lftp`) hoch und prüft danach, ob sie erreichbar sind. Auf dem Server wird nie etwas gelöscht, nur in `www/<name>/` hochgeladen bzw. überschrieben. Manuell starten: **Actions → Deploy → Run workflow**.
+Hinweis: Der frühere Ordner `ReverseAging` wurde am 2026-11-03 hier hineingeführt (E-012/E-013).
 
-Eine neue Seite veröffentlichen heißt also: Ordner unter `sites/` anlegen (mit `index.html`) und pushen.
+## Inhalt
 
-## Einmalige Einrichtung
+| Pfad | Zweck | im Repo |
+|---|---|---|
+| `site/content.md` | einziger Textquelltext der Seite (Markdown mit Fußnoten) | ja |
+| `site/hub.json` | Aufteilung in sieben Unterseiten, Kurzfassungen, Karten, Übungen, Tests | ja |
+| `site/build.mjs`, `styles.css`, `site.js` | Build mit Prüfungen, Aussehen, Seitenwechsel | ja |
+| `site/assets/` | Bilder (Morgenroutine, Sketchnote, Workouts) und Schrift | ja |
+| `work/` | Erstellungsskripte (A5-PDF, Zeichnungen), Designvorschlag | ja (ohne Bilder und Sicherungen) |
+| `.github/workflows/deploy.yml` | baut und lädt bei jedem Push nach heger.earth/reverse-aging hoch | ja |
+| `README.md`, `STATUS.md` | diese Anleitung, aktueller Stand | ja |
+| `outputs/morgenroutine-a5.pdf` | A5-Morgenroutine zum Ausdrucken | nein (nur lokal) |
+| `archiv/`, `Chats/`, `tmp/`, `work/backup-*` | Quellenarchiv, Chat-Kopien, Arbeits- und Sicherungsdateien | nein |
 
-### 1. FTP-Zugang im Domaintechnik Control Panel
-Control Panel → Modul **FTP**. Am besten einen eigenen FTP-Benutzer nur für das Deployment anlegen (eigenes Passwort, nicht das Control-Panel-Passwort).
+## Seite ändern
 
-- Ist sein Startordner das Hauptverzeichnis (dort liegen `www`, `logs`, `stats`), passt alles ohne weitere Einstellung.
-- Ist sein Startordner direkt `www`, lege unter Settings → Secrets and variables → Actions → **Variables** die Variable `FTP_WEBROOT` mit dem Wert `./` an.
+1. Texte in `site/content.md`, Kurzfassungen und Seitenaufteilung in `site/hub.json` bearbeiten.
+   Jeder `##`-Abschnitt in `content.md` muss in `hub.json` genau einer Seite zugeordnet sein, sonst bricht der Build ab.
+   Neue Bilder nach `site/assets/` bzw. `site/assets/workouts/`.
+2. Optional lokal prüfen: im Ordner `site` `node build.mjs --assets`, dann `dist/index.html` öffnen.
+3. `STATUS.md` aktualisieren.
+4. **GitHub Desktop** (Repository „reverse-aging“): Beschreibung eintragen → **Commit to main** → **Push origin**.
+5. Nach ca. 1 Minute online. Kontrolle auf github.com/ernesto-earth/reverse-aging unter **Actions**: grüner Haken = online.
 
-### 2. Secrets in GitHub hinterlegen
-Repo → Settings → Secrets and variables → Actions → **New repository secret**:
+## Neu aufsetzen
 
-- `FTP_SERVER` – FTP-Server laut Control Panel (`host28.ssl-net.net`)
-
-Falls der Port nicht 21 ist: unter **Variables** die Variable `FTP_PORT` anlegen.
-- `FTP_USERNAME` – der FTP-Benutzer aus Schritt 1
-- `FTP_PASSWORD` – sein Passwort
-
-Die Secrets sind verschlüsselt und auch für Claude nicht lesbar.
-
-### 3. Ersten Lauf starten
-Actions → Deploy → **Run workflow**. Ein grüner Haken bedeutet: die Seite ist online.
+1. Repo anlegen bzw. klonen, Inhalt dieses Ordners hinein, pushen.
+2. FTP-Benutzer im Domaintechnik Control Panel (Modul **FTP**); Startordner = Hauptverzeichnis, sonst Variable `FTP_WEBROOT` = `./`.
+3. Secrets (Settings → Secrets and variables → Actions): `FTP_SERVER` (`host28.ssl-net.net`), `FTP_USERNAME`, `FTP_PASSWORD`.
+4. Actions → Deploy → **Run workflow**.
 
 ## Fehlersuche
-- **Verbindung/TLS-Fehler:** Log des Schritts „Seiten hochladen“ ansehen; Servername und Port prüfen.
-- **Dateien landen im falschen Ordner:** `FTP_WEBROOT` anpassen (siehe Schritt 1).
-- **Prüfschritt rot, Upload grün:** Pfad prüfen, oder ob `.htaccess` die Adresse umleitet.
-- Bereits per Hand hochgeladene Dateien werden einfach überschrieben. Dateien, die aus `sites/` entfernt wurden, bleiben am Server liegen und müssen bei Bedarf im Dateimanager gelöscht werden.
+
+- **Build rot:** Die Meldung nennt den Abschnitt, Nachweis oder die Sprungmarke.
+- **Upload rot:** Secrets prüfen. **Prüfschritt rot, Upload grün:** `FTP_WEBROOT` oder `.htaccess` prüfen.
+- Am Server wird nie gelöscht. heger.earth hat derzeit kein gültiges SSL-Zertifikat, deshalb http.

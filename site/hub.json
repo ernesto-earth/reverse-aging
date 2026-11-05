@@ -1,0 +1,734 @@
+{
+  "title": "Reverse Aging – Routinen für ein starkes Älterwerden",
+  "stand": "3. November 2026",
+  "standShort": "Stand 3. Nov. 2026",
+  "pages": [
+    {
+      "id": "ueberblick",
+      "nav": "Überblick",
+      "icon": "grid",
+      "mobile": true,
+      "eyebrow": "Routinen-Hub",
+      "tone": "ink",
+      "title": "Stark älter werden – als Routine.",
+      "sections": [
+        "Auf einen Blick"
+      ],
+      "introAs": {
+        "Auf einen Blick": "Alle Routinen als Tabelle, mit Quellen"
+      },
+      "module": "overview",
+      "lead": "Was täglich, wöchentlich und einmal pro Quartal zu tun ist. Jede Empfehlung mit Herkunft."
+    },
+    {
+      "id": "morgen",
+      "nav": "Morgen",
+      "icon": "sun",
+      "mobile": true,
+      "eyebrow": "Täglich",
+      "tone": "day",
+      "title": "Morgenroutine: fünf Anker",
+      "lead": "Bewusst kompakt: Flüssigkeit, Tageslicht, Bewegung, Ernährung und geistige Aktivität in einer Reihenfolge, die sich ohne Vorbereitung wiederholen lässt.",
+      "sections": [
+        "Täglich: Morgenroutine"
+      ],
+      "module": "morning"
+    },
+    {
+      "id": "kraft",
+      "nav": "Kraft",
+      "icon": "dumbbell",
+      "mobile": true,
+      "eyebrow": "Wöchentlich · tragende Säule",
+      "tone": "week",
+      "title": "Kraft: 2 × pro Woche Ganzkörper",
+      "sections": [
+        "Wöchentlich: Kraft",
+        "Kür: Calisthenics für Fortgeschrittene"
+      ],
+      "introAs": {
+        "Wöchentlich: Kraft": "Die zwei Pfade und wie der Plan zu lesen ist",
+        "Kür: Calisthenics für Fortgeschrittene": "Worum es bei der Kür geht"
+      },
+      "module": "paths",
+      "groupTitles": {
+        "Wöchentlich: Kraft": "Im Detail: Pfad A",
+        "Kür: Calisthenics für Fortgeschrittene": "Im Detail: Pfad B (Kür)"
+      }
+    },
+    {
+      "id": "bewegung",
+      "nav": "Bewegung",
+      "icon": "walk",
+      "mobile": false,
+      "eyebrow": "Wöchentlich",
+      "tone": "week",
+      "title": "Ausdauer, Gleichgewicht, Erholung",
+      "sections": [
+        "Wöchentlich: Ausdauer, Gleichgewicht, Erholung"
+      ],
+      "module": "cards"
+    },
+    {
+      "id": "ernaehrung",
+      "nav": "Ernährung",
+      "icon": "bowl",
+      "mobile": false,
+      "eyebrow": "Täglich",
+      "tone": "day",
+      "title": "Ernährung: Protein und Kreatin",
+      "sections": [
+        "Ernährung"
+      ],
+      "module": "cards"
+    },
+    {
+      "id": "tests",
+      "nav": "Tests",
+      "icon": "chart",
+      "mobile": true,
+      "eyebrow": "Pro Quartal · etwa 10 Minuten",
+      "tone": "quarter",
+      "title": "Fortschritt messen",
+      "sections": [
+        "Fortschritt messen"
+      ],
+      "module": "tests"
+    },
+    {
+      "id": "hintergrund",
+      "nav": "Hintergrund",
+      "icon": "book",
+      "mobile": false,
+      "eyebrow": "Wissen",
+      "tone": "ink",
+      "title": "Hintergrund: Evidenz, Buch, Quellen",
+      "lead": "Warum die Routinen wirken, was das Buch von Jürgen Gießing sagt – und alle Quellen dieser Seite.",
+      "sections": [
+        "Warum das wirkt",
+        "Anhang: Zum Buch",
+        "Bibliografie und Quellen"
+      ],
+      "module": "tiles",
+      "allFootnotes": true
+    }
+  ],
+  "overview": {
+    "rhythm": [
+      {
+        "tone": "day",
+        "title": "Täglich",
+        "hint": "über den Vormittag",
+        "lead": "Morgenroutine · 5 Anker",
+        "list": [
+          "Ein Glas Wasser, Kaffee später",
+          "~30 Minuten Tageslicht draußen",
+          "15–30 Minuten Muskeln fordern",
+          "Protein auf zwei Mahlzeiten",
+          "Aktiv denken statt nur Bildschirm"
+        ],
+        "rows": [
+          [
+            "Protein",
+            "0,8 g/kg · ab 65: 1,0–1,2 g/kg",
+            "DGE",
+            "lit"
+          ],
+          [
+            "Schlaf",
+            "7–9 h · ab 65: 7–8 h",
+            "NSF",
+            "lit"
+          ]
+        ],
+        "links": [
+          [
+            "morgen",
+            "Zur Morgenroutine"
+          ],
+          [
+            "ernaehrung",
+            "Ernährung"
+          ]
+        ]
+      },
+      {
+        "tone": "week",
+        "title": "Wöchentlich",
+        "hint": "Beispielwoche",
+        "week": [
+          [
+            "Mo",
+            "Kraft",
+            "strong"
+          ],
+          [
+            "Di",
+            "Ausd.",
+            "soft"
+          ],
+          [
+            "Mi",
+            "Bal.",
+            "alt"
+          ],
+          [
+            "Do",
+            "Kraft",
+            "strong"
+          ],
+          [
+            "Fr",
+            "Ausd.",
+            "soft"
+          ],
+          [
+            "Sa",
+            "Bal.",
+            "alt"
+          ],
+          [
+            "So",
+            "Ruhe",
+            "rest"
+          ]
+        ],
+        "rows": [
+          [
+            "Kraft 2 ×, Ganzkörper daheim",
+            "~45 min",
+            "gut belegt",
+            "lit"
+          ],
+          [
+            "Ausdauer moderat",
+            "150–300 min",
+            "WHO",
+            "lit"
+          ],
+          [
+            "Gleichgewicht ab 65",
+            "an 3 Tagen",
+            "WHO",
+            "lit"
+          ],
+          [
+            "Ruhetag zwischen Kraft",
+            "mind. 1",
+            "Redaktionell",
+            "red"
+          ]
+        ],
+        "links": [
+          [
+            "kraft",
+            "Kraftplan"
+          ],
+          [
+            "bewegung",
+            "Ausdauer & Balance"
+          ]
+        ],
+        "weekLegend": "Ausd. = Ausdauer · Bal. = Gleichgewicht · Beispiel, frei verschiebbar"
+      },
+      {
+        "tone": "quarter",
+        "title": "Pro Quartal",
+        "hint": "etwa 10 Minuten",
+        "lead": "Selbsttests – wirkt die Routine?",
+        "rows": [
+          [
+            "30-Sekunden-Aufstehtest",
+            "Wdh. zählen",
+            "CDC",
+            "lit"
+          ],
+          [
+            "4-Stufen-Gleichgewicht",
+            "je 10 s",
+            "CDC",
+            "lit"
+          ],
+          [
+            "Fünfmal Aufstehen",
+            "unter 15 s",
+            "EWGSOP2",
+            "lit"
+          ],
+          [
+            "Gehtempo, 4 Meter",
+            "über 0,8 m/s",
+            "EWGSOP2",
+            "lit"
+          ]
+        ],
+        "note": "Richtwerte gelten ab 60. Wichtiger ist der eigene Verlauf: pro Quartal eine Zeile notieren.",
+        "links": [
+          [
+            "tests",
+            "Zu den Tests"
+          ]
+        ]
+      }
+    ],
+    "tiles": [
+      {
+        "label": "Optional",
+        "title": "Kreatin zum Training",
+        "tag": [
+          "moderat belegt",
+          "lit"
+        ],
+        "href": "#kreatin-optional"
+      },
+      {
+        "label": "Kür",
+        "title": "Calisthenics in drei Levels",
+        "tag": [
+          "Magazin",
+          "mag"
+        ],
+        "href": "#kraft/B"
+      },
+      {
+        "label": "Hintergrund",
+        "title": "Warum das wirkt · Buch · Quellen",
+        "href": "#hintergrund"
+      }
+    ]
+  },
+  "morning": {
+    "image": {
+      "src": "assets/morgenroutine-a5.png",
+      "alt": "Morgenroutine auf einer A5-Seite: fünf Anker für einen guten Tag – Wasser, Tageslicht, Training, Protein, aktiv denken",
+      "caption": "Die A5-Fassung zum Ausdrucken liegt im Projektordner Routinen."
+    },
+    "anchors": [
+      [
+        "Wasser",
+        "Direkt nach dem Aufwachen ein volles Glas Wasser. Kaffee erst später.",
+        "sofort"
+      ],
+      [
+        "Tageslicht",
+        "Früh nach draußen, möglichst rund 30 Minuten Tageslicht.",
+        "~30 min"
+      ],
+      [
+        "Training",
+        "Muskeln fordern: Theraband, Kniebeugen, Liegestütze oder Planking.",
+        "15–30 min"
+      ],
+      [
+        "Protein",
+        "Auf zwei Mahlzeiten verteilen: Fisch, Fleisch, Eier, Joghurt oder Hülsenfrüchte.",
+        "2 Mahlzeiten"
+      ],
+      [
+        "Aktiv denken",
+        "Anspruchsvolle Tätigkeiten bewusst in den Tag holen – nicht nur Bildschirm.",
+        "im Tag"
+      ]
+    ],
+    "versions": [
+      [
+        "Minimum",
+        "Wasser, fünf Minuten vor die Tür, kurze Bewegungsserie."
+      ],
+      [
+        "Normal",
+        "Alle fünf Anker in ruhiger Folge über den Vormittag."
+      ],
+      [
+        "Ausgefallen?",
+        "Nicht nachholen – am nächsten Morgen wieder einsteigen."
+      ]
+    ],
+    "tag": [
+      "Redaktioneller Vorschlag",
+      "red"
+    ]
+  },
+  "paths": {
+    "lead": "An nicht aufeinanderfolgenden Tagen, je etwa 45 Minuten, daheim. Welches Programm genau, ist zweitrangig – solange es regelmäßig ist und gesteigert wird.",
+    "leadTag": [
+      "gut belegt",
+      "lit"
+    ],
+    "tabs": [
+      {
+        "id": "A",
+        "label": "Pfad A",
+        "sub": "daheim",
+        "tag": [
+          "Redaktioneller Vorschlag",
+          "red"
+        ],
+        "note": "Zwei Einheiten pro Woche, z. B. Montag Einheit 1 und Donnerstag Einheit 2. Pausen 1–2 Minuten. Langhantel nur mit Ablageständer.",
+        "detail": "Pfad A: Kraft daheim mit Hanteln und Theraband",
+        "progression": true,
+        "cards": [
+          [
+            "Einheit 1",
+            "Kniebeuge mit Langhantel",
+            "Oberschenkel, Gesäß",
+            "3 × 6–10",
+            "assets/workouts/pfad-a-kniebeuge-langhantel.png"
+          ],
+          [
+            "Einheit 1",
+            "Liegestütz",
+            "Brust, Trizeps, Rumpf",
+            "3 × sauber, 2 in Reserve",
+            "assets/workouts/pfad-a-liegestuetz.png"
+          ],
+          [
+            "Einheit 1",
+            "Rudern mit Theraband",
+            "Band an der Türschnalle · oberer Rücken",
+            "3 × 12–15",
+            "assets/workouts/pfad-a-rudern-band-tuer.png"
+          ],
+          [
+            "Einheit 1",
+            "Unterarmstütz",
+            "Rumpf",
+            "3 × 30–60 s",
+            "assets/workouts/pfad-a-unterarmstuetz.png"
+          ],
+          [
+            "Einheit 1",
+            "Außenrotation mit Theraband",
+            "Band an der Türschnalle · Schulter",
+            "2 × 12–15 je Seite",
+            "assets/workouts/pfad-a-aussenrotation-band-tuer.png"
+          ],
+          [
+            "Einheit 2",
+            "Kreuzheben mit Langhantel",
+            "Gesäß, Beinrückseite, Rücken",
+            "3 × 5–8",
+            "assets/workouts/pfad-a-kreuzheben-langhantel.png"
+          ],
+          [
+            "Einheit 2",
+            "Klimmzüge",
+            "breiter Rücken, Arme",
+            "3 × 3–8",
+            "assets/workouts/pfad-a-klimmzuege.png"
+          ],
+          [
+            "Einheit 2",
+            "Schulterdrücken mit Kurzhanteln",
+            "Schulter, Trizeps",
+            "3 × 8–12",
+            "assets/workouts/pfad-a-schulterdruecken-kurzhantel.png"
+          ],
+          [
+            "Einheit 2",
+            "Rudern mit Kurzhantel",
+            "einarmig, Hand auf der Bank · oberer Rücken",
+            "3 × 8–12 je Seite",
+            "assets/workouts/pfad-a-rudern-kurzhantel.png"
+          ]
+        ]
+      },
+      {
+        "id": "B",
+        "label": "Pfad B",
+        "sub": "Kür",
+        "tag": [
+          "Magazin",
+          "mag"
+        ],
+        "note": "Erst wenn Pfad A seit Monaten regelmäßig und beschwerdefrei läuft. Pro Level zuerst die Einstiegsvariante beherrschen.",
+        "detail": "Basis: Drücken, Ziehen, Stützen",
+        "progression": false,
+        "cards": [
+          [
+            "Basis",
+            "Diamond Push-ups",
+            "Brust, Trizeps",
+            "3 × 10 · 2 × pro Woche",
+            "assets/workouts/diamond-pushups.png"
+          ],
+          [
+            "Basis",
+            "Pull-ups / Chin-ups",
+            "Rücken, Arme",
+            "3 × 10 · 2 × pro Woche",
+            "assets/workouts/pullups-chinups.png"
+          ],
+          [
+            "Basis",
+            "Dips",
+            "Brust, Schulter, Trizeps",
+            "3 × 10 · 2 × pro Woche",
+            "assets/workouts/dips.png"
+          ],
+          [
+            "Level 1",
+            "Dragon Flag",
+            "Rumpf, Körperspannung",
+            "5 s halten · 5 Wdh. · 3 Sätze",
+            "assets/workouts/dragon-flag.png"
+          ],
+          [
+            "Level 2",
+            "Bent-Arm-Planche",
+            "Schulter, Rumpf",
+            "10–15 s halten · 3 Sätze",
+            "assets/workouts/bent-arm-planche.png"
+          ],
+          [
+            "Level 3",
+            "Front Lever",
+            "Rücken, Rumpf",
+            "3–5 s halten · 3 Sätze",
+            "assets/workouts/front-lever.png"
+          ]
+        ]
+      }
+    ],
+    "progression": [
+      [
+        "Woche 1–2",
+        "Technik lernen, leicht",
+        "Satz beenden, wenn noch 3–4 Wdh. gingen"
+      ],
+      [
+        "Woche 3–4",
+        "gleichmäßig aufbauen",
+        "noch 2–3 Wdh. in Reserve"
+      ],
+      [
+        "ab Woche 5",
+        "nahe an die Ermüdung",
+        "stoppen, wenn Tempo oder Technik zerfällt"
+      ]
+    ],
+    "rule": "Obere Wiederholungszahl in allen Sätzen sauber? Beim nächsten Training etwas mehr Gewicht oder ein stärkeres Band.",
+    "side": {
+      "before": [
+        "5–10 Minuten locker aufwärmen",
+        "erste Übung mit leerer Stange oder leichtem Band",
+        "Kniebeuge nur mit Ablageständer",
+        "Tür schließen: der Zug drückt sie ins Schloss",
+        "weiteratmen, keine Pressatmung"
+      ],
+      "safety": "Bei Brustschmerz, ungewöhnlicher Atemnot, Schwindel oder stechendem Schmerz: abbrechen und abklären.",
+      "safetyHref": "praktische-sicherheitsgrenzen",
+      "beforeHref": "vor-jeder-einheit"
+    },
+    "progressionNote": "gilt für Pfad A"
+  },
+  "cards": {
+    "bewegung": [
+      {
+        "title": "Ausdauer",
+        "big": "150–300 min",
+        "sub": "pro Woche moderat – oder 75–150 min intensiv",
+        "rows": [
+          [
+            "moderat",
+            "Sprechen geht, Singen nicht"
+          ],
+          [
+            "intensiv",
+            "nur noch kurze Sätze"
+          ],
+          [
+            "Alltag",
+            "Treppen, Wege zu Fuß zählen mit"
+          ]
+        ],
+        "tag": [
+          "WHO",
+          "lit"
+        ],
+        "detail": "Ausdauer"
+      },
+      {
+        "title": "Gleichgewicht",
+        "big": "5 min",
+        "sub": "an 3 Tagen pro Woche (ab 65), Halt in Reichweite",
+        "rows": [
+          [
+            "Tandemstand",
+            "3 × 30 s"
+          ],
+          [
+            "Einbeinstand",
+            "je Seite 3 × 20 s"
+          ],
+          [
+            "Auf einer Linie gehen",
+            "2 × 10 Schritte"
+          ]
+        ],
+        "tag": [
+          "WHO · Übungen redaktionell",
+          "lit"
+        ],
+        "detail": "Gleichgewicht"
+      },
+      {
+        "title": "Erholung und Schlaf",
+        "big": "7–9 h",
+        "sub": "Schlaf mit 26–64 Jahren · ab 65: 7–8 h",
+        "rows": [
+          [
+            "zwischen Krafteinheiten",
+            "mind. 1 Ruhetag"
+          ],
+          [
+            "an Ruhetagen",
+            "leichte Bewegung"
+          ],
+          [
+            "Schlafprobleme",
+            "ärztlich abklären"
+          ]
+        ],
+        "tag": [
+          "NSF",
+          "lit"
+        ],
+        "detail": "Erholung und Schlaf"
+      }
+    ],
+    "ernaehrung": [
+      {
+        "title": "Protein",
+        "big": "0,8 g/kg",
+        "sub": "pro Tag, gesunde Erwachsene 19–64",
+        "rows": [
+          [
+            "ab 65 (DGE)",
+            "1,0 g/kg"
+          ],
+          [
+            "gesunde Ältere (PROT-AGE)",
+            "1,0–1,2 g/kg"
+          ],
+          [
+            "Beispiel 75 kg",
+            "75 g auf 2–3 Mahlzeiten"
+          ]
+        ],
+        "tag": [
+          "DGE · PROT-AGE",
+          "lit"
+        ],
+        "detail": "Protein im Alltag"
+      },
+      {
+        "title": "Kreatin",
+        "big": "optional",
+        "sub": "nur zusätzlich zum Krafttraining, nicht statt",
+        "rows": [
+          [
+            "Gießing im Interview",
+            "3 g täglich"
+          ],
+          [
+            "Metaanalyse Ältere",
+            "+1,37 kg fettfreie Masse"
+          ],
+          [
+            "vorher abklären",
+            "Niere, Laborwerte, Medikation"
+          ]
+        ],
+        "tag": [
+          "moderat belegt",
+          "lit"
+        ],
+        "detail": "Kreatin (optional)"
+      },
+      {
+        "title": "Grenzen",
+        "big": "kein Ersatz",
+        "sub": "mehr Protein ersetzt keinen Trainingsreiz",
+        "rows": [
+          [
+            "gut versorgt?",
+            "Zusatznutzen nicht automatisch"
+          ],
+          [
+            "Quellen",
+            "tierisch oder pflanzlich"
+          ],
+          [
+            "Supplement",
+            "nicht grundsätzlich nötig"
+          ]
+        ],
+        "tag": [
+          "DGE",
+          "lit"
+        ],
+        "detail": "Protein im Alltag"
+      }
+    ]
+  },
+  "tests": [
+    {
+      "name": "30-Sekunden-Aufstehtest",
+      "how": "Stuhl ohne Armlehnen, Arme gekreuzt. Wie oft ganz aufstehen in 30 s?",
+      "value": "Tabelle nach Alter",
+      "tag": [
+        "CDC STEADI",
+        "lit"
+      ]
+    },
+    {
+      "name": "Vier-Stufen-Gleichgewicht",
+      "how": "Je 10 s: nebeneinander, Halbtandem, Tandem, Einbeinstand.",
+      "value": "Tandem unter 10 s: erhöhtes Sturzrisiko",
+      "tag": [
+        "CDC STEADI",
+        "lit"
+      ]
+    },
+    {
+      "name": "Fünfmal Aufstehen",
+      "how": "Zeit für fünf vollständige Wiederholungen ohne Armeinsatz.",
+      "value": "über 15 s: geringe Beinkraft",
+      "tag": [
+        "EWGSOP2",
+        "lit"
+      ]
+    },
+    {
+      "name": "Gehtempo (optional)",
+      "how": "4 Meter normal gehen, Zeit messen: 4 ÷ Sekunden.",
+      "value": "≤ 0,8 m/s: geringe Leistungsfähigkeit",
+      "tag": [
+        "EWGSOP2",
+        "lit"
+      ]
+    }
+  ],
+  "testsNote": "Screening aus der Altersmedizin, keine Diagnose. Richtwerte gelten ab 60 – für Jüngere zählt der eigene Verlauf. Pro Quartal eine Zeile: Datum, Werte, Trainingspfad, Gewicht, Beschwerden.",
+  "tiles": [
+    {
+      "href": "#warum-das-wirkt",
+      "label": "Evidenz",
+      "title": "Warum das wirkt",
+      "text": "HIT, wissenschaftliche Einordnung, was „Reverse Aging“ heißen kann."
+    },
+    {
+      "href": "#anhang-zum-buch",
+      "label": "Buch",
+      "title": "Zum Buch von Jürgen Gießing",
+      "text": "Quellenstatus, Kernaussagen, Autor, Interviews, Bewertung."
+    },
+    {
+      "href": "#bibliografie-und-quellen",
+      "label": "Quellen",
+      "title": "Bibliografie und alle Nachweise",
+      "text": "Leitlinien, Studien, Interviews und ergänzende Quellen."
+    }
+  ]
+}

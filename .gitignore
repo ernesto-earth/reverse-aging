@@ -1,1 +1,18 @@
+# Das Repo ist ÖFFENTLICH und spiegelt den Projektordner Routinen.
 .DS_Store
+*.webloc
+__pycache__/
+*.pdf
+
+# Gebaute Seite: entsteht beim Deploy neu
+site/dist/
+
+# Bleibt nur lokal
+.hermes.md
+Chats/
+archiv/
+tmp/
+site/.openai/
+site/.site-build/
+work/backup-*/
+work/**/*.png

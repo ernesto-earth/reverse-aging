@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Reverse Aging Routinen – Kraft</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F4EF}
+a{color:#14201C}a:hover{color:#C2410C}
+.nav a{color:#E6EAE6;text-decoration:none;font-size:14px;font-weight:500;padding:20px 2px 17px;border-bottom:3px solid transparent}
+.nav a:hover{color:#FFFFFF}
+.tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.02em;padding:2px 7px;border-radius:4px;white-space:nowrap}
+.t-lit{background:#DDEEE9;color:#1F5F55}
+.t-int{background:#E3E8F2;color:#2B4C7E}
+.t-red{background:#ECEDE8;color:#4A5752}
+.t-mag{background:#FBE7DC;color:#9A3412}
+.seg{font:inherit;font-size:14px;font-weight:600;border:0;border-radius:8px;padding:10px 16px;min-height:44px;cursor:pointer;text-align:left}
+details summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center;min-height:44px}
+</style>
+</helmet>
+<div style="min-height: 940px; background: #F3F4EF; font-family: Inter, system-ui, sans-serif; color: #14201C">
+
+<header style="background: #14201C">
+<div class="nav" style="max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 28px">
+<a href="Main.dc.html" style="font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 700; letter-spacing: .04em; color: #FFFFFF; border: 0; padding: 14px 0; margin-right: 12px">REVERSE AGING <span style="color: #F08A5D">ROUTINEN</span></a>
+<nav aria-label="Hauptnavigation" style="display: flex; flex-wrap: wrap; gap: 26px; flex: 1">
+<a href="Main.dc.html">Überblick</a>
+<a href="#">Morgen</a>
+<a href="Kraft.dc.html" aria-current="page" style="color: #FFFFFF; border-bottom-color: #F08A5D">Kraft</a>
+<a href="#">Bewegung</a>
+<a href="#">Ernährung</a>
+<a href="#">Tests</a>
+<a href="#">Hintergrund</a>
+</nav>
+<span style="font-size: 13px; color: #B8C2BC">Stand 3. Nov. 2026</span>
+</div>
+</header>
+
+<main style="max-width: 1280px; margin: 0 auto; padding: 26px 32px 40px">
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px; margin-bottom: 20px">
+<div style="max-width: 720px">
+<p style="margin: 0 0 6px; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #1F5F55">Wöchentlich · tragende Säule</p>
+<h1 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-size: 40px; font-weight: 700; line-height: 1">Kraft: 2 × pro Woche Ganzkörper</h1>
+<p style="margin: 8px 0 0; font-size: 15px; color: #4A5752; line-height: 1.5">An nicht aufeinanderfolgenden Tagen, je 30–45 Minuten. Welches Programm genau, ist zweitrangig – solange es regelmäßig ist und gesteigert wird. <span class="tag t-lit">gut belegt</span></p>
+</div>
+<div role="tablist" aria-label="Trainingspfad" style="display: flex; gap: 6px; background: #E4E7E0; padding: 5px; border-radius: 11px">
+<sc-for list="{{tabs}}" as="t" hint-placeholder-count="3">
+<button class="seg" role="tab" aria-selected="{{t.sel}}" onClick="{{t.pick}}" style="{{t.style}}"><span style="display: block">{{t.label}}</span><span style="display: block; font-size: 12px; font-weight: 500; opacity: .8">{{t.sub}}</span></button>
+</sc-for>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px">
+<sc-for list="{{ex}}" as="e" hint-placeholder-count="5">
+<div style="background: #FFFFFF; border-radius: 12px; padding: 16px 16px 18px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'Barlow Condensed', sans-serif; font-size: 30px; font-weight: 700; line-height: 1; color: #C2410C">{{e.n}}</span>
+<b style="font-size: 16px">{{e.name}}</b>
+<span style="font-size: 13px; color: #4A5752">{{e.muscle}}</span>
+<span style="margin-top: 8px; font-size: 13px; font-weight: 600; background: #F3F4EF; border-radius: 6px; padding: 6px 8px">{{e.dose}}</span>
+<span style="font-size: 12px; color: #4A5752">{{e.easy}}</span>
+</div>
+</sc-for>
+</div>
+
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; margin: 12px 0 22px; font-size: 13px; color: #4A5752">
+<span>{{note}}</span>
+<span class="tag {{tagClass}}">{{tagLabel}}</span>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
+<section style="grid-column: span 2; background: #FFFFFF; border-radius: 14px; padding: 20px 24px">
+<div style="display: flex; justify-content: space-between; align-items: baseline">
+<h2 style="margin: 0; font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: .03em">Steigerung in drei Phasen</h2>
+<span class="tag t-red">Redaktioneller Vorschlag</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 14px">
+<div style="border-radius: 10px; background: #DDEEE9; padding: 14px"><b style="display: block; color: #1F5F55">Woche 1–2</b><span style="display: block; font-size: 14px; margin-top: 4px">Technik lernen, leicht</span><span style="display: block; font-size: 13px; color: #4A5752; margin-top: 6px">Satz beenden, wenn noch 3–4 Wdh. gingen</span></div>
+<div style="border-radius: 10px; background: #B9DDD3; padding: 14px"><b style="display: block; color: #1F5F55">Woche 3–4</b><span style="display: block; font-size: 14px; margin-top: 4px">gleichmäßig aufbauen</span><span style="display: block; font-size: 13px; color: #33403B; margin-top: 6px">noch 2–3 Wdh. in Reserve</span></div>
+<div style="border-radius: 10px; background: #1F5F55; color: #FFFFFF; padding: 14px"><b style="display: block">ab Woche 5</b><span style="display: block; font-size: 14px; margin-top: 4px">nahe an die Ermüdung</span><span style="display: block; font-size: 13px; color: #D5E7E1; margin-top: 6px">stoppen, wenn Technik zerfällt</span></div>
+</div>
+<p style="margin: 14px 0 0; font-size: 14px; line-height: 1.5"><b>Regel:</b> 15 saubere Wiederholungen gehen wiederholt? Nächstes Mal die kleinste Stufe mehr Gewicht.</p>
+</section>
+
+<section style="background: #FFFFFF; border-radius: 14px; padding: 12px 22px">
+<details open="">
+<summary>Vor jeder Einheit <span aria-hidden="true">–</span></summary>
+<ol style="margin: 0 0 10px; padding-left: 20px; font-size: 14px; line-height: 1.55">
+<li>5–10 Minuten locker aufwärmen</li>
+<li>erste Übung sehr leicht vorbereiten</li>
+<li>Gerät schmerzfrei einstellen</li>
+<li>weiteratmen, keine Pressatmung</li>
+</ol>
+</details>
+<details style="border-top: 1px solid #E4E7E0">
+<summary>Sicherheitsgrenzen <span aria-hidden="true">+</span></summary>
+<p style="margin: 0 0 10px; font-size: 14px">Bei Brustschmerz, Atemnot, Schwindel: abbrechen und abklären.</p>
+</details>
+<details style="border-top: 1px solid #E4E7E0">
+<summary>Quellen (3) <span aria-hidden="true">+</span></summary>
+<p style="margin: 0 0 10px; font-size: 14px">Interview Gießing · WHO 2020 · Metaanalyse Muskelversagen</p>
+</details>
+</section>
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":940}}'>
+class Component extends DCLogic {
+constructor(p) { super(p); this.state = { path: 'A' }; }
+renderVals() {
+const P = {
+A: { note: 'Je Übung 1 Arbeitssatz, langsam und sauber. Beispiel: Montag und Donnerstag. Kraft vor Ausdauer.', tagClass: 't-int', tagLabel: 'Autor-Interview',
+ex: [
+['1','Beinpresse','Oberschenkel, Gesäß','1 Satz · 10–15 Wdh.','langsam, kontrolliert'],
+['2','Brustpresse','Brust, Schulter, Trizeps','1 Satz · 10–15 Wdh.','langsam, kontrolliert'],
+['3','Latzug','breiter Rücken, Armbeuger','1 Satz · 10–15 Wdh.','langsam, kontrolliert'],
+['4','Rückenstrecker','unterer Rücken','1 Satz · 10–15 Wdh.','langsam, kontrolliert'],
+['5','Bauchpresse','Bauch, Rumpf','1 Satz · 10–15 Wdh.','langsam, kontrolliert']] },
+B: { note: 'Dieselben fünf Bewegungsmuster daheim. Satz beenden, bevor die Bewegung unsauber wird.', tagClass: 't-red', tagLabel: 'Redaktioneller Vorschlag',
+ex: [
+['1','Aufstehen vom Stuhl','ersetzt Beinpresse','1–2 Sätze · 8–15','leichter: höherer Stuhl'],
+['2','Tisch-Liegestütz','ersetzt Brustpresse','1–2 Sätze · 8–15','leichter: an der Wand'],
+['3','Rudern mit Band','ersetzt Latzug','1–2 Sätze · 8–15','leichter: dünneres Band'],
+['4','Hüftheben','Hüft-/Rückenstreckung','1–2 Sätze · 8–15','leichter: kleiner Weg'],
+['5','Dead Bug','Rumpf','1–2 Sätze · 6–12 je Seite','leichter: nur Arme']] },
+C: { note: 'Kür, erst wenn Pfad A oder B seit Monaten sauber läuft. Pro Level erst die Einstiegsvariante beherrschen.', tagClass: 't-mag', tagLabel: 'Magazin',
+ex: [
+['0','Basis','drei Grundübungen','2 × pro Woche','Voraussetzung'],
+['1','Dragon Flag','Rumpf, Körperspannung','Einstiegsvariante zuerst','Level 1'],
+['2','Bent-Arm-Planche','Schulter, Rumpf','Einstiegsvariante zuerst','Level 2'],
+['3','Front Lever','Rücken, Rumpf','Zielbewegung','Level 3'],
+['–','Ausrüstung','Stange, Barren, Matte','25–40 Minuten','Erholung dazwischen']] }
+};
+const cur = P[this.state.path];
+const tabs = [['A','Pfad A','Studio · Big 5'],['B','Pfad B','daheim'],['C','Pfad C','Kür']].map(([id,label,sub]) => {
+const sel = this.state.path === id;
+return { label, sub, sel: sel ? 'true' : 'false', pick: () => this.setState({ path: id }),
+style: sel ? 'background: #14201C; color: #FFFFFF' : 'background: transparent; color: #14201C' };
+});
+return { tabs, note: cur.note, tagClass: cur.tagClass, tagLabel: cur.tagLabel,
+ex: cur.ex.map(([n,name,muscle,dose,easy]) => ({ n, name, muscle, dose, easy })) };
+}
+}
+</script>
+</body>
+</html>
