@@ -41,6 +41,18 @@ jobs:
         working-directory: site
         run: node build.mjs --assets
 
+      - name: Veröffentlichte Version schreiben
+        run: |
+          node --input-type=module -e '
+            import fs from "node:fs";
+            const commit = process.env.GITHUB_SHA;
+            if (!/^[0-9a-f]{40}$/.test(commit || "")) throw new Error("Ungültiger Commit");
+            fs.writeFileSync("site/dist/version.json", JSON.stringify({
+              commit,
+              deployed_at: new Date().toISOString()
+            }, null, 2) + "\n");
+          '
+
       - name: lftp installieren
         run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
 

@@ -101,32 +101,49 @@ else
   say "== Prüfe Commit ${sha:0:7} ($(git log -1 --format=%s))"
 fi
 
-# GitHub Action abwarten, wenn ein Token verfügbar ist
+# Den Deploy-Workflow für genau diesen Commit abwarten (öffentlich auch ohne Token).
 token="${COS_GIT_TOKEN:-${GITHUB_TOKEN:-}}"
-deploy="nicht geprüft (kein Token)"
-if [ -n "$token" ]; then
-  deploy="keine Action ausgelöst (nur Dateien außerhalb der Seite geändert)"
-  for i in $(seq 1 40); do
-    [ "$nur_pruefen" = 1 ] && [ "$i" = 1 ] || sleep 10
-    json=$(curl -fsS -H "Authorization: Bearer $token" -H "Accept: application/vnd.github+json" \
-      "https://api.github.com/repos/$REPO/actions/runs?head_sha=$sha&per_page=1" 2>/dev/null) || continue
-    st=$(printf '%s' "$json" | "$NODE" -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const r=(JSON.parse(s).workflow_runs||[])[0];console.log(r?[r.status,r.conclusion||"-",r.id].join(" "):"")})')
-    if [ -z "$st" ]; then [ "$i" -ge 6 ] && break; continue; fi
-    read -r r_status r_conclusion r_id <<< "$st"
-    if [ "$r_status" = "completed" ]; then
-      deploy="Action-Lauf $r_id: $r_conclusion"
-      [ "$r_conclusion" = "success" ] || stop "Deploy $deploy – https://github.com/$REPO/actions/runs/$r_id"
-      break
-    fi
-    deploy="Action-Lauf $r_id läuft noch"
-  done
-else
-  [ "$nur_pruefen" = 1 ] || sleep 90
-fi
+api_headers=(-H "Accept: application/vnd.github+json")
+[ -z "$token" ] || api_headers+=(-H "Authorization: Bearer $token")
+deploy="kein erfolgreicher Deploy nachgewiesen"
+deploy_ok=0
+for i in $(seq 1 40); do
+  [ "$nur_pruefen" = 1 ] && [ "$i" = 1 ] || sleep 10
+  json=$(curl -fsS --max-time 20 "${api_headers[@]}" \
+    "https://api.github.com/repos/$REPO/actions/workflows/deploy.yml/runs?head_sha=$sha&per_page=1" 2>/dev/null) || continue
+  st=$(printf '%s' "$json" | "$NODE" -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{const r=(JSON.parse(s).workflow_runs||[])[0];console.log(r?[r.status,r.conclusion||"-",r.id].join(" "):"")}catch{process.exitCode=1}})') || continue
+  if [ -z "$st" ]; then [ "$i" -ge 6 ] && break; continue; fi
+  read -r r_status r_conclusion r_id <<< "$st"
+  if [ "$r_status" = "completed" ]; then
+    deploy="Action-Lauf $r_id: $r_conclusion"
+    [ "$r_conclusion" = "success" ] || stop "Deploy $deploy – https://github.com/$REPO/actions/runs/$r_id"
+    deploy_ok=1
+    break
+  fi
+  deploy="Action-Lauf $r_id läuft noch"
+done
+[ "$deploy_ok" = 1 ] || stop "Deploy nicht bestätigt: $deploy. Commit ${sha:0:7}; nichts erneut starten."
 say "== Deploy: $deploy"
 
 code=$(curl -s -m 20 -o /dev/null -w '%{http_code}' "$SITE_URL" || true)
 say "== $SITE_URL → HTTP $code (erwartet $ERWARTET_HTTP)"
 [ "$code" = "$ERWARTET_HTTP" ] || stop "Seite antwortet mit HTTP $code statt $ERWARTET_HTTP. Commit ${sha:0:7} ist gepusht."
 
-say "ERGEBNIS: veröffentlicht – Commit ${sha:0:7}, $deploy, $SITE_URL HTTP $code"
+version_url="${SITE_URL}version.json"
+version=$(curl -fsS --max-time 20 -H 'Cache-Control: no-cache' "${version_url}?commit=$sha") || stop "Live-Version unter $version_url nicht lesbar."
+deployed_at=$(printf '%s' "$version" | EXPECTED_COMMIT="$sha" "$NODE" -e '
+  let s="";
+  process.stdin.on("data", d => s += d).on("end", () => {
+    try {
+      const v = JSON.parse(s);
+      if (!/^[0-9a-f]{40}$/.test(v.commit || "") || v.commit !== process.env.EXPECTED_COMMIT)
+        throw new Error("Live-Commit stimmt nicht mit dem gepushten Commit überein");
+      if (typeof v.deployed_at !== "string" || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[+-]\d{2}:\d{2})$/.test(v.deployed_at) || !Number.isFinite(Date.parse(v.deployed_at)))
+        throw new Error("deployed_at ist keine gültige ISO-Zeit");
+      console.log(v.deployed_at);
+    } catch (e) { console.error(e.message); process.exitCode = 1; }
+  });
+') || stop "Live-Version ungültig oder abweichend; erwartet $sha."
+say "== Live-Abgleich: $version_url → Commit $sha, deployed_at $deployed_at"
+
+say "ERGEBNIS: veröffentlicht – Commit ${sha:0:7}, deployed_at $deployed_at, $deploy, $SITE_URL HTTP $code, Live-Commit stimmt überein"

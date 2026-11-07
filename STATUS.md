@@ -5,18 +5,18 @@ Alleinige aktuelle Statusquelle dieses registrierten Projekts. Historische Abnah
 | Feld | Wert |
 |---|---|
 | Projekt | Reverse Aging Routinen |
-| Arbeitsstatus | aktiv; Website auf heger.earth/reverse-aging, Projektordner ist einzige Quelle (Grundsätze 2026-11-05); ein Projekt für Seite, Quelltext und Archiv (E-012/E-013) |
-| Letzte Statusaktualisierung | 2026-11-06T11:54:47+01:00 |
-| Zuletzt erledigt | 2026-11-06: E-024-Anleitungen und Veröffentlichungsskript lokal geprüft; Shell-Syntax gültig, Betriebsabnahme offen. Statusfelder innerhalb der Übertragungsgrenzen formuliert; vollständige Historie unter Lokale Belege erhalten. Kein Commit, Push oder Jobstart bei dieser Nachbesserung. |
-| Nächster Schritt | Nach gesonderter Freigabe den E-024-Ende-zu-Ende-Test für dieses Projekt durchführen: Cockpit-Bestätigung, Hermes-Ausführung, exakter Commit, erfolgreicher Deploy und sichtbare Änderung getrennt belegen. Vorher nur prüfen, ob die vorbereitete Ausführung im Dienst geladen und der Zugang nutzbar ist; Einrichtung oder Neustart nicht pauschal wiederholen. Fachliche Durchsicht von Pfad A bleibt offen. Diese Statuspflege bleibt lokal, ohne Commit, Push oder Veröffentlichung durch Hermes. |
+| Arbeitsstatus | aktiv; COS-014: prüfbare Live-Version technisch vorbereitet, einmalige Veröffentlichung ausdrücklich beauftragt |
+| Letzte Statusaktualisierung | 2026-11-07T09:04:58+01:00 |
+| Zuletzt erledigt | COS-014: Deploy-Workflow erzeugt site/dist/version.json mit vollem Commit und ISO-Zeit; Veröffentlichungsskript verlangt erfolgreichen Deploy und passenden Live-Commit. Lokale Prüfungen bestanden; Live-Abnahme folgt. |
+| Nächster Schritt | Einmal mit ./veroeffentlichen.sh veröffentlichen, Live-Version abgleichen und Site-Version/Prüfstand mit dem tatsächlichen Ergebnis nachtragen. Fachliche Durchsicht von Pfad A bleibt offen. |
 | Offene Entscheidung | Fachliche Durchsicht des neuen Pfads A (Dosierungen sind redaktionell) durch Ernesto offen. Werte von WHO und EWGSOP2 nach übereinstimmenden Übersichten von Ernesto am 2026-11-03 akzeptiert (Hinweis bleibt in der Fußnote). |
 | Inhaltsstand | site/content.md ist der einzige Textquelltext: am 2026-11-06 lokal 58.002 Bytes und 37 Fußnotendefinitionen gezählt; site/hub.json enthält sieben Seiten mit Aufteilung und Kurzfassungen (Karten, Übungen, Tests). Inhalte bei dieser Statuspflege nicht verändert. A5-Bild, Sketchnote, 13 Workout-Grafiken, 9 Zeichnungen für Pfad A (pfad-a-*.png; Quellen in work/zeichnungen-pfad-a/, frühere Pfad-B-Zeichnungen archiviert in work/zeichnungen-pfad-b/) und Schrift Barlow Condensed (OFL) in site/assets; outputs/morgenroutine-a5.pdf; Designvorschlag in work/designvorschlag-2026-11-03/; Archiv der Recherchefassung in archiv/; Sicherungen in work/backup-2026-11-03-vor-zusammenfuehrung/ (u. a. *-vor-hub.*). |
-| Prüfstand | 2026-11-06, lokale Statusprüfung: .hermes.md, README.md, das noch unversionierte veroeffentlichen.sh und vorhandene Git-Differenzen gelesen; bash -n für das Veröffentlichungsskript erfolgreich. Lokaler Git-HEAD a00392b; README/STATUS bereits vorher geändert. Neue Inhalts-/Build-/Browserprüfung und E-024-Betriebsabnahme nicht durchgeführt; Zugangsgeheimnisse nicht geprüft. Historischer Prüfstand vom 2026-11-03: Build ohne Fehler (7 Seiten, 37 Nachweise, jeder Abschnitt von content.md genau einer Seite zugeordnet, keine toten Sprungmarken, keine doppelten IDs); Build auf dem Mac aus dem Projektordner ergibt dieselbe Datei; alle Seiten im Browser geprüft (Desktop 1440 px und Handy 390 px, keine Skriptfehler); Gestaltung (Fassung 1793728542-dc03) von Ernesto am 2026-11-03 bestätigt. Fachliche Abnahme bleibt offen. |
-| Site-Stand | Bisher dokumentierte Veröffentlichung unter http://heger.earth/reverse-aging/ (öffentliches Repo ernesto-earth/reverse-aging, GitHub Action); aktueller Live-Inhalt und exakter Deploy bei dieser lokalen Statuspflege nicht neu geprüft. E-024-Veröffentlichungsweg lokal vorbereitet, noch nicht Ende zu Ende abgenommen. Frühere Claude-Seite (claude.ai/artifact/S1pz7Q7c9yQRboJHKhRJic) und ChatGPT-Site werden nicht mehr gepflegt. |
+| Prüfstand | 2026-11-07: node build.mjs --assets erfolgreich (187699 Bytes, 7 Seiten, 37 Nachweise); bash -n erfolgreich; 12 isolierte Mock-Fälle für Live-Abgleich/Deploy/HTTP erfolgreich, echter Workflow-Versionserzeuger mit gültigem und ungültigem SHA getestet. Live-Abgleich noch offen; Inhalt/Gestaltung nicht geändert. |
+| Site-Stand | COS-014 lokal umgesetzt und geprüft; noch nicht veröffentlicht. Live-Abnahme nach dem ausdrücklich beauftragten einmaligen Skriptlauf. |
 | Site-Projekt-ID | GitHub ernesto-earth/reverse-aging |
-| Site-Version | unbekannt (aktueller Live-Deploy nicht geprüft) |
+| Site-Version | unbekannt (COS-014-Live-Abgleich noch ausstehend) |
 | Site-URL | http://heger.earth/reverse-aging/ (Link auch als .webloc im Ordner) |
-| Zuletzt aktualisiert durch | Hermes, im Auftrag Ernestos am 2026-11-06; lokale Nachbesserung der Statusfeldlängen, keine Veröffentlichung |
+| Zuletzt aktualisiert durch | Hermes, ausdrücklich bestätigter COS-Auftrag COS-014 am 2026-11-07 |
 
 ## Lokale Belege
 
