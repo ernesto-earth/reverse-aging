@@ -4,7 +4,7 @@ Website: **http://heger.earth/reverse-aging/**
 
 Der Projektordner `a.5. Projekte/Routinen` ist die einzige Quelle. Das öffentliche GitHub-Repo
 `ernesto-earth/reverse-aging` ist sein Spiegel (ohne die lokalen Teile, siehe unten) und veröffentlicht
-die Seite automatisch. Keine Abhängigkeit zu Claude oder ChatGPT.
+die Seite automatisch. Keine Abhängigkeit zu Claude oder ChatGPT; bearbeitet und veröffentlicht wird über Hermes (E-024).
 
 Hinweis: Der frühere Ordner `ReverseAging` wurde am 2026-11-03 hier hineingeführt (E-012/E-013).
 
@@ -29,7 +29,10 @@ Hinweis: Der frühere Ordner `ReverseAging` wurde am 2026-11-03 hier hineingefü
    Neue Bilder nach `site/assets/` bzw. `site/assets/workouts/`.
 2. Optional lokal prüfen: im Ordner `site` `node build.mjs --assets`, dann `dist/index.html` öffnen.
 3. `STATUS.md` aktualisieren.
-4. **GitHub Desktop** (Repository „reverse-aging“): Beschreibung eintragen → **Commit to main** → **Push origin**.
+4. **Veröffentlichen:** im Projektordner `./veroeffentlichen.sh "Kurze Beschreibung"` ausführen
+   (macht Hermes nach jedem Änderungsauftrag selbst, E-024). Das Skript baut, committet, pusht, wartet auf die
+   GitHub Action und prüft die Seite; die letzte Zeile `ERGEBNIS:` sagt, ob alles geklappt hat.
+   Ausweichweg von Hand: GitHub Desktop (Repository „reverse-aging“) → **Commit to main** → **Push origin**.
 5. Nach ca. 1 Minute online. Kontrolle auf github.com/ernesto-earth/reverse-aging unter **Actions**: grüner Haken = online.
 
 ## Neu aufsetzen
