@@ -125,25 +125,10 @@ done
 [ "$deploy_ok" = 1 ] || stop "Deploy nicht bestätigt: $deploy. Commit ${sha:0:7}; nichts erneut starten."
 say "== Deploy: $deploy"
 
-code=$(curl -s -m 20 -o /dev/null -w '%{http_code}' "$SITE_URL" || true)
-say "== $SITE_URL → HTTP $code (erwartet $ERWARTET_HTTP)"
-[ "$code" = "$ERWARTET_HTTP" ] || stop "Seite antwortet mit HTTP $code statt $ERWARTET_HTTP. Commit ${sha:0:7} ist gepusht."
+if ! check=$("$NODE" ./deploy-pruefen.mjs "$sha" "$SITE_URL" 2>&1); then
+  stop "Seiten-/Versionsprüfung fehlgeschlagen ($check). Commit ${sha:0:7} ist gepusht."
+fi
+say "== Live-Abgleich: $check"
+deployed_at=$(printf '%s' "$check" | "$NODE" -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>console.log(JSON.parse(s).deployed_at))') || stop "Prüfergebnis nicht lesbar."
 
-version_url="${SITE_URL}version.json"
-version=$(curl -fsS --max-time 20 -H 'Cache-Control: no-cache' "${version_url}?commit=$sha") || stop "Live-Version unter $version_url nicht lesbar."
-deployed_at=$(printf '%s' "$version" | EXPECTED_COMMIT="$sha" "$NODE" -e '
-  let s="";
-  process.stdin.on("data", d => s += d).on("end", () => {
-    try {
-      const v = JSON.parse(s);
-      if (!/^[0-9a-f]{40}$/.test(v.commit || "") || v.commit !== process.env.EXPECTED_COMMIT)
-        throw new Error("Live-Commit stimmt nicht mit dem gepushten Commit überein");
-      if (typeof v.deployed_at !== "string" || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[+-]\d{2}:\d{2})$/.test(v.deployed_at) || !Number.isFinite(Date.parse(v.deployed_at)))
-        throw new Error("deployed_at ist keine gültige ISO-Zeit");
-      console.log(v.deployed_at);
-    } catch (e) { console.error(e.message); process.exitCode = 1; }
-  });
-') || stop "Live-Version ungültig oder abweichend; erwartet $sha."
-say "== Live-Abgleich: $version_url → Commit $sha, deployed_at $deployed_at"
-
-say "ERGEBNIS: veröffentlicht – Commit ${sha:0:7}, deployed_at $deployed_at, $deploy, $SITE_URL HTTP $code, Live-Commit stimmt überein"
+say "ERGEBNIS: veröffentlicht – Commit ${sha:0:7}, deployed_at $deployed_at, $deploy, $SITE_URL HTTP $ERWARTET_HTTP am geprüften Ziel, Live-Commit stimmt überein"

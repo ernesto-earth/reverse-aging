@@ -17,7 +17,7 @@ name: Deploy
 on:
   push:
     branches: [main]
-    paths: ["site/**", ".github/workflows/deploy.yml"]
+    paths: ["site/**", ".github/workflows/deploy.yml", "deploy-pruefen.mjs", "test-deploy-pruefen.mjs"]
   workflow_dispatch:
 
 concurrency:
@@ -36,6 +36,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+
+      - name: Deployment-Prüfung offline testen
+        run: node --test test-deploy-pruefen.mjs
 
       - name: Seite bauen (prüft Abschnitte, Nachweise und Sprungmarken)
         working-directory: site
@@ -74,7 +77,5 @@ jobs:
       - name: Prüfen, ob die Seite erreichbar ist
         run: |
           sleep 3
-          # http statt https: heger.earth hat derzeit kein gültiges SSL-Zertifikat
-          code=$(curl -s -o /dev/null -w '%{http_code}' "http://heger.earth/${SITE}/" || true)
-          echo "http://heger.earth/${SITE}/ → HTTP $code"
-          [ "$code" = "200" ]
+          # Bestehende Weiterleitungen ohne Zugangsdaten prüfen; Version am geprüften Ziel abgleichen.
+          node deploy-pruefen.mjs "$GITHUB_SHA" "http://heger.earth/${SITE}/"
