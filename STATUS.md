@@ -5,20 +5,34 @@ Alleinige aktuelle Statusquelle dieses registrierten Projekts. Historische Abnah
 | Feld | Wert |
 |---|---|
 | Projekt | Reverse Aging Routinen |
-| Arbeitsstatus | COS-014 abgeschlossen; Prüfkorrektur genau einmal veröffentlicht, Action erfolgreich und Live-Commit identisch. |
-| Letzte Statusaktualisierung | 2026-11-07T09:24:53+01:00 |
-| Zuletzt erledigt | Prüfprinzip aus Rezepte b3467bd übernommen: gemeinsamer deploy-pruefen.mjs für Workflow und Veröffentlichungsskript; bestehende Weiterleitungen ohne Zugangsdaten, nur heger.earth/www.heger.earth und unveränderter Seitenpfad, strikter Live-version.json-Abgleich am geprüften Ziel. Genau ein neu freigegebener Lauf: Commit 77bec4ef16ace6eebfc0df34c1cba277f2c5a205, Action 42355308795 success, Live-Commit identisch. Keine Server-, URL-, Zertifikats-, Weiterleitungs- oder Inhaltsänderung. |
-| Nächster Schritt | Keine weitere Veröffentlichung für COS-014; fachliche Durchsicht von Pfad A bleibt unabhängig offen. |
+| Arbeitsstatus | COS-018 lokal abgeschlossen; COS-014 erledigt. |
+| Letzte Statusaktualisierung | 2026-11-07T10:26:40+01:00 |
+| Zuletzt erledigt | Statusfelder gekürzt, bisherige Angaben unter Belege erhalten und dauerhafte Statusregel in .hermes.md ergänzt. |
+| Nächster Schritt | Entscheidung von Ernesto zur offenen fachlichen Frage abwarten; keine Veröffentlichung beauftragt. |
 | Offene Entscheidung | Fachliche Durchsicht des neuen Pfads A (Dosierungen sind redaktionell) durch Ernesto offen. Werte von WHO und EWGSOP2 nach übereinstimmenden Übersichten von Ernesto am 2026-11-03 akzeptiert (Hinweis bleibt in der Fußnote). |
-| Inhaltsstand | site/content.md ist der einzige Textquelltext: am 2026-11-06 lokal 58.002 Bytes und 37 Fußnotendefinitionen gezählt; site/hub.json enthält sieben Seiten mit Aufteilung und Kurzfassungen (Karten, Übungen, Tests). Inhalte bei dieser Statuspflege nicht verändert. A5-Bild, Sketchnote, 13 Workout-Grafiken, 9 Zeichnungen für Pfad A (pfad-a-*.png; Quellen in work/zeichnungen-pfad-a/, frühere Pfad-B-Zeichnungen archiviert in work/zeichnungen-pfad-b/) und Schrift Barlow Condensed (OFL) in site/assets; outputs/morgenroutine-a5.pdf; Designvorschlag in work/designvorschlag-2026-11-03/; Archiv der Recherchefassung in archiv/; Sicherungen in work/backup-2026-11-03-vor-zusammenfuehrung/ (u. a. *-vor-hub.*). |
-| Prüfstand | 2026-11-07: 27 Offline-Tests bestanden; node --check, bash -n und Workflow-YAML-Prüfung erfolgreich. Build erfolgreich: 7 Seiten, 37 Nachweise (Build-Ausgabe: 187699 bytes). SHA-256-Vergleich bestätigt 31 unveränderte Quelldateien (Text, Hub, Styles, Seitenskript, Assets). GitHub-API bestätigt Action 42355308795 success für den vollen Commit, einschließlich Offline-Tests, Versionserzeugung, FTPS und Live-Prüfung. Skript bestätigt HTTP 200 nach einer bestehenden Weiterleitung und exakten Live-Commit; Live-HTML zusätzlich bytegleich mit lokalem Build (189416 Bytes). |
-| Site-Stand | Erfolgreich veröffentlicht: Commit 77bec4ef16ace6eebfc0df34c1cba277f2c5a205, Action https://github.com/ernesto-earth/reverse-aging/actions/runs/42355308795 success. http://heger.earth/reverse-aging/ leitet unverändert nach https://www.heger.earth/reverse-aging/; version.json dort HTTP 200, Commit identisch und deployed_at 2026-11-07T08:24:00.046Z. Genau ein Lauf nach ergänzender Freigabe; abschließender Statusnachtrag nur lokal, kein weiterer Push. |
+| Inhaltsstand | geprüft: Textquelltext ist site/content.md, Seitenaufteilung und Kurzfassungen liegen in site/hub.json; die Inhalte bleiben unverändert. |
+| Prüfstand | geprüft: Die Statusformatprüfung ist erfolgreich; die zuletzt dokumentierten technischen Prüfungen von COS-014 bleiben gültiger Belegstand, wurden hier aber nicht erneut ausgeführt. |
+| Site-Stand | veröffentlicht: Die zuletzt belegte Live-Version stammt aus COS-014; dieser Auftrag ändert nur lokale Statusdokumentation und veröffentlicht nichts. |
 | Site-Projekt-ID | GitHub ernesto-earth/reverse-aging |
 | Site-Version | 77bec4e · 2026-11-07T08:24:00.046Z (version.json live geprüft; Action success) |
 | Site-URL | http://heger.earth/reverse-aging/ (Link auch als .webloc im Ordner) |
-| Zuletzt aktualisiert durch | Hermes, ausdrücklich bestätigter COS-Auftrag COS-014 am 2026-11-07 |
+| Zuletzt aktualisiert durch | Hermes, ausdrücklich bestätigter COS-Auftrag COS-018 am 2026-11-07 |
 
-## Lokale Belege
+## Belege
+
+### Übernommener Belegstand vor COS-018
+
+Die folgenden Angaben sind unverändert übernommene Dokumentation, keine in COS-018 erneut ausgeführten Prüfungen.
+
+- Bisheriger Arbeitsstatus: COS-014 abgeschlossen; Prüfkorrektur genau einmal veröffentlicht, Action erfolgreich und Live-Commit identisch.
+- Bisherige letzte Statusaktualisierung: 2026-11-07T09:24:53+01:00.
+- Bisheriges Feld „Zuletzt erledigt“: Prüfprinzip aus Rezepte b3467bd übernommen: gemeinsamer deploy-pruefen.mjs für Workflow und Veröffentlichungsskript; bestehende Weiterleitungen ohne Zugangsdaten, nur heger.earth/www.heger.earth und unveränderter Seitenpfad, strikter Live-version.json-Abgleich am geprüften Ziel. Genau ein neu freigegebener Lauf: Commit 77bec4ef16ace6eebfc0df34c1cba277f2c5a205, Action 42355308795 success, Live-Commit identisch. Keine Server-, URL-, Zertifikats-, Weiterleitungs- oder Inhaltsänderung.
+- Bisheriges Feld „Inhaltsstand“: site/content.md ist der einzige Textquelltext: am 2026-11-06 lokal 58.002 Bytes und 37 Fußnotendefinitionen gezählt; site/hub.json enthält sieben Seiten mit Aufteilung und Kurzfassungen (Karten, Übungen, Tests). Inhalte bei dieser Statuspflege nicht verändert. A5-Bild, Sketchnote, 13 Workout-Grafiken, 9 Zeichnungen für Pfad A (pfad-a-*.png; Quellen in work/zeichnungen-pfad-a/, frühere Pfad-B-Zeichnungen archiviert in work/zeichnungen-pfad-b/) und Schrift Barlow Condensed (OFL) in site/assets; outputs/morgenroutine-a5.pdf; Designvorschlag in work/designvorschlag-2026-11-03/; Archiv der Recherchefassung in archiv/; Sicherungen in work/backup-2026-11-03-vor-zusammenfuehrung/ (u. a. *-vor-hub.*).
+- Bisheriges Feld „Prüfstand“: 2026-11-07: 27 Offline-Tests bestanden; node --check, bash -n und Workflow-YAML-Prüfung erfolgreich. Build erfolgreich: 7 Seiten, 37 Nachweise (Build-Ausgabe: 187699 bytes). SHA-256-Vergleich bestätigt 31 unveränderte Quelldateien (Text, Hub, Styles, Seitenskript, Assets). GitHub-API bestätigt Action 42355308795 success für den vollen Commit, einschließlich Offline-Tests, Versionserzeugung, FTPS und Live-Prüfung. Skript bestätigt HTTP 200 nach einer bestehenden Weiterleitung und exakten Live-Commit; Live-HTML zusätzlich bytegleich mit lokalem Build (189416 Bytes).
+- Bisheriges Feld „Site-Stand“: Erfolgreich veröffentlicht: Commit 77bec4ef16ace6eebfc0df34c1cba277f2c5a205, Action https://github.com/ernesto-earth/reverse-aging/actions/runs/42355308795 success. http://heger.earth/reverse-aging/ leitet unverändert nach https://www.heger.earth/reverse-aging/; version.json dort HTTP 200, Commit identisch und deployed_at 2026-11-07T08:24:00.046Z. Genau ein Lauf nach ergänzender Freigabe; abschließender Statusnachtrag nur lokal, kein weiterer Push.
+- Bisherige Aktualisierung durch: Hermes, ausdrücklich bestätigter COS-Auftrag COS-014 am 2026-11-07.
+
+### Lokale Belege
 
 ### Vollständige Erläuterungen zu den gekürzten Statusfeldern
 
