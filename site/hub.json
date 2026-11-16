@@ -1,7 +1,7 @@
 {
   "title": "Reverse Aging – Routinen für ein starkes Älterwerden",
-  "stand": "3. November 2026",
-  "standShort": "Stand 3. Nov. 2026",
+  "stand": "16. November 2026",
+  "standShort": "Stand 16. Nov. 2026",
   "pages": [
     {
       "id": "ueberblick",
@@ -83,6 +83,19 @@
       "module": "cards"
     },
     {
+      "id": "fettstoffwechsel",
+      "nav": "Fettstoffwechsel",
+      "icon": "bowl",
+      "mobile": false,
+      "eyebrow": "Täglich",
+      "tone": "day",
+      "title": "Fettstoffwechsel: Aufbau bremsen, Abbau stützen",
+      "sections": [
+        "Fettstoffwechsel"
+      ],
+      "module": "cards"
+    },
+    {
       "id": "tests",
       "nav": "Tests",
       "icon": "chart",
@@ -149,6 +162,10 @@
           [
             "ernaehrung",
             "Ernährung"
+          ],
+          [
+            "fettstoffwechsel",
+            "Fettstoffwechsel"
           ]
         ]
       },
@@ -301,7 +318,7 @@
     "image": {
       "src": "assets/morgenroutine-a5.png",
       "alt": "Morgenroutine auf einer A5-Seite: fünf Anker für einen guten Tag – Wasser, Tageslicht, Training, Protein, aktiv denken",
-      "caption": "Die A5-Fassung zum Ausdrucken liegt im Projektordner Routinen."
+      "caption": "Die A5-Fassung zum Ausdrucken liegt im Projektordner reverse-aging."
     },
     "anchors": [
       [
@@ -669,6 +686,80 @@
           "lit"
         ],
         "detail": "Protein im Alltag"
+      }
+    ],
+    "fettstoffwechsel": [
+      {
+        "title": "Aufbau bremsen",
+        "big": "12–16 h",
+        "sub": "Essenspause über Nacht, kein Dauer-Snacken",
+        "rows": [
+          [
+            "Zucker",
+            "keine gesüßten Getränke"
+          ],
+          [
+            "nach dem Essen",
+            "bewegen"
+          ],
+          [
+            "Schlaf",
+            "7–8 h"
+          ]
+        ],
+        "tag": [
+          "Physiologie",
+          "lit"
+        ],
+        "detail": "Fettaufbau bremsen"
+      },
+      {
+        "title": "Abbau stützen",
+        "big": "täglich",
+        "sub": "Ausdauer und Kraft, dazu kleine Reize",
+        "rows": [
+          [
+            "Koffein",
+            "30–60 min vor der Bewegung"
+          ],
+          [
+            "Kälte",
+            "kühl schlafen, kalt abduschen"
+          ],
+          [
+            "Grüner Tee",
+            "als Getränk, nicht als Kapsel"
+          ]
+        ],
+        "tag": [
+          "kleine Effekte",
+          "lit"
+        ],
+        "detail": "Fettabbau stützen"
+      },
+      {
+        "title": "Alkohol",
+        "big": "−73 %",
+        "sub": "Fettverbrennung nach 24 g Alkohol (acht Gesunde)",
+        "rows": [
+          [
+            "Fettabbau",
+            "Acetat bremst"
+          ],
+          [
+            "Fettaufnahme",
+            "steigt bei Dauerkonsum"
+          ],
+          [
+            "Probe",
+            "6–8 Wochen Verzicht, Werte messen"
+          ]
+        ],
+        "tag": [
+          "kleine Humanstudien",
+          "lit"
+        ],
+        "detail": "Alkohol"
       }
     ]
   },

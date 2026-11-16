@@ -1,12 +1,13 @@
-# Routinen – „Reverse Aging – Routinen für ein starkes Älterwerden“
+# reverse-aging – „Reverse Aging – Routinen für ein starkes Älterwerden“
 
 Website: **http://heger.earth/reverse-aging/**
 
-Der Projektordner `a.5. Projekte/Routinen` ist die einzige Quelle. Das öffentliche GitHub-Repo
+Der Projektordner `a.5. Projekte/reverse-aging` ist die einzige Quelle. Das öffentliche GitHub-Repo
 `ernesto-earth/reverse-aging` ist sein Spiegel (ohne die lokalen Teile, siehe unten) und veröffentlicht
 die Seite automatisch. Keine Abhängigkeit zu Claude oder ChatGPT; bearbeitet und veröffentlicht wird über Hermes (E-024).
 
 Hinweis: Der frühere Ordner `ReverseAging` wurde am 2026-11-03 hier hineingeführt (E-012/E-013).
+Bis 2026-11-16 hieß dieser Projektordner `Routinen`; seither heißt er wie das Repo `reverse-aging`.
 
 ## Inhalt
 

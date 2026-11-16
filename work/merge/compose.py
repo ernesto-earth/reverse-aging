@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Baut Routinen/site/content.md nach der neuen Struktur (E-012).
+"""Baut reverse-aging/site/content.md nach der neuen Struktur (E-012).
 Übernommene Abschnitte werden wortgleich aus den bisherigen Quelltexten ausgeschnitten."""
 import re, sys
 from pathlib import Path
 
-ROUT = Path(sys.argv[1])          # Routinen/site/content.md (alt)
+ROUT = Path(sys.argv[1])          # reverse-aging/site/content.md (alt)
 RA = Path(sys.argv[2])            # ReverseAging/content.md (Quellenarchiv)
 OUT = Path(sys.argv[3])
 
@@ -40,7 +40,7 @@ morning = section(rout, "## Morgenroutine", include_heading=False)
 pdf_line = "**Zum Ausdrucken:** [Morgenroutine als einseitige A5-PDF](assets/morgenroutine-a5.pdf)"
 assert pdf_line in morning
 morning = morning.replace(pdf_line,
-    "**Zum Ausdrucken:** Die einseitige A5-Fassung liegt im Projektordner Routinen (`outputs/morgenroutine-a5.pdf`).\n\n"
+    "**Zum Ausdrucken:** Die einseitige A5-Fassung liegt im Projektordner reverse-aging (`outputs/morgenroutine-a5.pdf`).\n\n"
     "Anker 3 (Training) und Anker 4 (Protein) sind unten ausführlicher beschrieben: [Wöchentlich: Kraft](#wochentlich-kraft) und [Ernährung](#ernahrung).")
 
 calis = section(rout, "### Häng dich rein: Calisthenics in drei Levels", include_heading=False)

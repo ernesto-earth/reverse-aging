@@ -1,4 +1,4 @@
-# Das Repo ist ÖFFENTLICH und spiegelt den Projektordner Routinen.
+# Das Repo ist ÖFFENTLICH und spiegelt den Projektordner reverse-aging.
 .DS_Store
 *.webloc
 __pycache__/
@@ -16,3 +16,6 @@ site/.openai/
 site/.site-build/
 work/backup-*/
 work/**/*.png
+
+# Persönliche Gesundheitsrecherche (Lipome): bleibt nur lokal
+Fettstoffwechsel/

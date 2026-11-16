@@ -1,22 +1,22 @@
-# Projektstatus – Reverse Aging Routinen
+# Projektstatus – reverse-aging
 
 Alleinige aktuelle Statusquelle dieses registrierten Projekts. Historische Abnahmen und Übergaben sind Belege, keine konkurrierenden Statusquellen.
 
 | Feld | Wert |
 |---|---|
-| Projekt | Reverse Aging Routinen |
-| Arbeitsstatus | COS-018 lokal abgeschlossen; COS-014 erledigt. |
-| Letzte Statusaktualisierung | 2026-11-07T10:26:40+01:00 |
-| Zuletzt erledigt | Statusfelder gekürzt, bisherige Angaben unter Belege erhalten und dauerhafte Statusregel in .hermes.md ergänzt. |
-| Nächster Schritt | Entscheidung von Ernesto zur offenen fachlichen Frage abwarten; keine Veröffentlichung beauftragt. |
+| Projekt | reverse-aging |
+| Arbeitsstatus | Unterseite Fettstoffwechsel ergänzt und Projekt auf reverse-aging umbenannt; Veröffentlichung am 2026-11-16 von Ernesto beauftragt. |
+| Letzte Statusaktualisierung | 2026-11-16T17:24:37+01:00 |
+| Zuletzt erledigt | Neue Unterseite Fettstoffwechsel (allgemeine Fassung, nur Routinen) in site/content.md und site/hub.json; Projekt und Ordner von „Routinen“ auf „reverse-aging“ umbenannt; Ordner Fettstoffwechsel bleibt lokal. |
+| Nächster Schritt | Chief-of-Staff-Register (PROJEKTE.json) auf den neuen Ordnerpfad und Projektnamen nachziehen; fachliche Durchsicht der Fettstoffwechsel-Seite durch Ernesto. |
 | Offene Entscheidung | Fachliche Durchsicht des neuen Pfads A (Dosierungen sind redaktionell) durch Ernesto offen. Werte von WHO und EWGSOP2 nach übereinstimmenden Übersichten von Ernesto am 2026-11-03 akzeptiert (Hinweis bleibt in der Fußnote). |
-| Inhaltsstand | geprüft: Textquelltext ist site/content.md, Seitenaufteilung und Kurzfassungen liegen in site/hub.json; die Inhalte bleiben unverändert. |
-| Prüfstand | geprüft: Die Statusformatprüfung ist erfolgreich; die zuletzt dokumentierten technischen Prüfungen von COS-014 bleiben gültiger Belegstand, wurden hier aber nicht erneut ausgeführt. |
-| Site-Stand | veröffentlicht: Die zuletzt belegte Live-Version stammt aus COS-014; dieser Auftrag ändert nur lokale Statusdokumentation und veröffentlicht nichts. |
+| Inhaltsstand | offen: Die neue Unterseite Fettstoffwechsel mit 27 Nachweisen ist aus einer Literaturrecherche übernommen und von Ernesto noch nicht fachlich durchgesehen. |
+| Prüfstand | geprüft: Build am 2026-11-16 fehlerfrei (8 Seiten, 64 Nachweise), kein fehlender Nachweis, keine persönlichen Angaben im Seitentext. |
+| Site-Stand | offen: Veröffentlichung dieses Stands am 2026-11-16 beauftragt; die Live-Prüfung folgt nach dem Deploy. |
 | Site-Projekt-ID | GitHub ernesto-earth/reverse-aging |
 | Site-Version | 77bec4e · 2026-11-07T08:24:00.046Z (version.json live geprüft; Action success) |
 | Site-URL | http://heger.earth/reverse-aging/ (Link auch als .webloc im Ordner) |
-| Zuletzt aktualisiert durch | Hermes, ausdrücklich bestätigter COS-Auftrag COS-018 am 2026-11-07 |
+| Zuletzt aktualisiert durch | Claude, Auftrag von Ernesto am 2026-11-16 (Fettstoffwechsel-Seite, Umbenennung, Veröffentlichung) |
 
 ## Belege
 

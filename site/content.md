@@ -3,7 +3,7 @@ title: "Reverse Aging – Routinen für ein starkes Älterwerden"
 subtitle: "Was täglich, wöchentlich und vierteljährlich hilft – mit Herkunft und Evidenz"
 language: de
 status: "Zusammengeführte Routinenseite (E-012)"
-stand: "2026-11-03"
+stand: "2026-11-16"
 ---
 
 # Reverse Aging – Routinen für ein starkes Älterwerden
@@ -22,6 +22,7 @@ stand: "2026-11-03"
 | an 3 Tagen pro Woche (ab 65) | Gleichgewicht und Kraft kombiniert | kurz, in Training oder Alltag eingebaut | [Fachliteratur] WHO-Empfehlung[^who] |
 | jede Nacht | Schlaf | 7–9 Stunden (26–64 Jahre), 7–8 Stunden (ab 65) | [Fachliteratur][^nsf] |
 | täglich | Protein auf die Mahlzeiten verteilt | 0,8 g/kg (19–64 Jahre), 1,0–1,2 g/kg (ab 65) pro Tag | [Fachliteratur][^dge][^protage] |
+| täglich | Fettstoffwechsel: Essenspausen, wenig Zucker, kein Alkohol | 12–16 Stunden Essenspause über Nacht | [Fachliteratur] Physiologie gut belegt, Effekt auf das Körperfett klein[^fs-fasten][^fs-zucker] |
 | optional | Kreatinmonohydrat zusätzlich zum Training | nach eigener Abwägung | [Fachliteratur] moderat belegt[^creatine-meta] |
 | vierteljährlich | Selbsttests: Aufstehen, Gleichgewicht, Gehtempo | etwa 10 Minuten | [Fachliteratur][^steadi-chair][^ewgsop2] |
 | als Kür | Pfad B: Calisthenics in drei Levels | wenn Pfad A sicher sitzt | [Magazin][^calisthenics] |
@@ -45,7 +46,7 @@ Die Morgenroutine ist bewusst kompakt. Sie verbindet Flüssigkeit, Tageslicht, B
 | 4 · Protein | Auf zwei Mahlzeiten verteilen: Fisch, Fleisch, Eier, Joghurt oder Hülsenfrüchte; Nüsse ergänzend. Menge an den Bedarf anpassen. |
 | 5 · Aktiv denken | Anspruchsvolle Tätigkeiten bewusst in den Tag holen – nicht nur passive Bildschirmzeit. |
 
-**Zum Ausdrucken:** Die einseitige A5-Fassung liegt im Projektordner Routinen (`outputs/morgenroutine-a5.pdf`).
+**Zum Ausdrucken:** Die einseitige A5-Fassung liegt im Projektordner reverse-aging (`outputs/morgenroutine-a5.pdf`).
 
 Anker 3 (Training) und Anker 4 (Protein) sind unten ausführlicher beschrieben: [Wöchentlich: Kraft](#wochentlich-kraft) und [Ernährung](#ernahrung).
 
@@ -337,6 +338,75 @@ Einordnung und Vorsicht:
 - Bei bekannter Nierenerkrankung, Schwangerschaft/Stillzeit, komplexer Medikation oder unklaren Laborwerten ist vor Supplementierung medizinischer Rat sinnvoll.
 - Nahrungsergänzungsmittel durchlaufen kein Arzneimittel-Zulassungsverfahren; Produktreinheit und Deklaration verdienen deshalb Aufmerksamkeit.[^bfr]
 
+## Fettstoffwechsel
+
+**Kurzurteil:** Den Fettstoffwechsel stützen vor allem einfache Gewohnheiten: Essenspausen, wenig Zucker, Bewegung, Schlaf und kein Alkohol. Belegt ist jeweils die Wirkung auf Blutwerte, Hormone oder normales Fettgewebe; die Effekte auf das Körperfett selbst sind klein.[^fs-fasten][^fs-zucker][^fs-alkohol]
+
+Die Hebel lassen sich in zwei Gruppen ordnen: weniger Fett in die Fettzellen gelangen lassen und den Fettabbau freigeben. Insulin steuert beides. Ist es hoch, schleust das Fettgewebe Fett ein und hält es fest; ist es niedrig, geben die Zellen Fett ab.[^fs-fasten][^fs-lpl]
+
+### Fettaufbau bremsen
+
+| Hebel | Was es bewirkt | Beleg |
+|---|---|---|
+| Wenig Zucker, keine gesüßten Getränke, wenig Fruchtsaft | Weniger Insulin, weniger Triglyzeride, weniger Leberfett und Harnsäure | [Fachliteratur] Bei gesunden Männern verdoppelte sich die Fettneubildung in der Leber nach sieben Wochen mit täglich gesüßten Getränken.[^fs-zucker][^fs-zucker2] |
+| Essenspausen: über Nacht 12 bis 16 Stunden, kein Dauer-Snacken | Niedriges Insulin gibt den Fettabbau frei; im Fasten fährt der Körper das Enzym herunter, das Fett ins Fettgewebe einschleust | [Fachliteratur] Physiologie gut belegt[^fs-fasten] |
+| Bewegung nach dem Essen | Lenkt Blutfett eher in den Muskel als ins Fettgewebe | [Fachliteratur] Tierdaten; beim Menschen ist gezeigt, dass Insulin das Einschleus-Enzym im Fettgewebe hoch- und im Muskel herunterregelt.[^fs-nachessen][^fs-lpl] |
+| Sieben bis acht Stunden Schlaf | Stützt die Insulinwirkung: Vier kurze Nächte machten Fettzellen rund 30 % unempfindlicher für Insulin | [Fachliteratur] Schlaflabor-Studie[^fs-schlaf] |
+| Fetter Seefisch zweimal pro Woche | Omega-3-Fettsäuren senken in hoher Dosis die Triglyzeride; in üblichen Essmengen ist kein messbarer Effekt zu erwarten, aber auch kein Nachteil | [Fachliteratur][^fs-omega3] |
+| Gewicht halten | Vermeidet zusätzlichen Fettaufbau | [Redaktioneller Vorschlag] |
+
+### Fettabbau stützen
+
+- **Ausdauer und Kraft, möglichst täglich.** Bewegung erhöht die Stresshormone, die den Fettabbau auslösen, senkt das Insulin und aktiviert über Herzhormone einen zweiten Abbauweg.[^fs-anp] Das deckt sich mit dem Kraft- und Ausdauerplan dieser Seite.
+- **Koffein gezielt einsetzen.** [Fachliteratur] Koffein setzt beim Menschen in Ruhe messbar Fettsäuren frei.[^fs-koffein] [Redaktioneller Vorschlag] Kaffee oder Tee 30 bis 60 Minuten vor der Bewegung, mit Abstand zur letzten Mahlzeit, nicht am Abend. Die EU-Lebensmittelbehörde hält für gesunde Erwachsene bis 200 mg auf einmal und 400 mg am Tag für unbedenklich.[^fs-efsa] Eine Tasse Filterkaffee enthält rund 90 mg, ein Espresso 80 mg, eine Tasse Tee 50 mg.
+- **Grüner Tee als Getränk.** [Fachliteratur] Eine Metaanalyse errechnete für Catechine plus Koffein rund 16 % mehr Fettverbrennung pro Tag.[^fs-tee] Als Aufguss gilt er als unbedenklich; für Extrakte in Kapseln gilt das nicht (siehe „Besser lassen“).
+- **Kälte.** [Fachliteratur] Kälte ist ein starker natürlicher Auslöser für Noradrenalin: Nach einer Stunde in 14 Grad kaltem Wasser hatten Probanden gut das Sechsfache im Blut. Schon zwei Stunden bei 19 Grad Raumtemperatur steigerten den Energieverbrauch und trainierten das braune Fett.[^fs-kaelte][^fs-braun] [Redaktioneller Vorschlag] Alltagstauglich: kühl schlafen, kalt abduschen. Bei Herz- oder Kreislauferkrankung vorher ärztlich klären.
+- **Schärfe.** [Fachliteratur] Inhaltsstoffe aus Chili aktivieren das braune Fett über denselben Weg wie Kälte und erhöhen den Energieverbrauch leicht.[^fs-chili]
+- **Muskeln gezielt arbeiten lassen.** [Fachliteratur] Im Fett direkt über arbeitenden Muskeln fand eine kleine Studie am Oberschenkel mehr Durchblutung und mehr Fettabbau.[^fs-muskel]
+
+### Alkohol
+
+**[Fachliteratur]** Alkohol greift an beiden Stellen zugleich ein:
+
+- **Fettabbau gebremst:** Nach 24 g Alkohol gab das Fettgewebe bei acht Gesunden 53 % weniger Fettsäuren ab, die Fettverbrennung im Körper sank um 73 %. Ursache ist Acetat, das die Leber aus Alkohol bildet.[^fs-alkohol]
+- **Fettaufnahme gesteigert:** 75 g Alkohol täglich über fünf Wochen verdreifachten in einer kleinen Studie das Enzym, das Fett ins Fettgewebe einschleust.[^fs-alkohol-lpl]
+- **Blutfette und Leber:** Alkohol erhöht die Triglyzeride, besonders bei Übergewicht, und fördert die Fettleber.[^fs-alkohol-tg]
+
+**[Redaktioneller Vorschlag]** Wer wissen will, wie viel der eigenen Werte auf Alkohol zurückgeht, verzichtet sechs bis acht Wochen und lässt Triglyzeride und GGT vorher und nachher bestimmen. Wer regelmäßig größere Mengen trinkt, sollte den Verzicht ärztlich begleiten lassen.
+
+### Cremes
+
+**[Fachliteratur]** Für örtlich aufgetragene Wirkstoffe gibt es nur kleine Studien mit uneinheitlichem Ergebnis:
+
+- **Koffein-Creme:** In einer Doppelblindstudie von 2026 nahm die Hautfaltendicke unter einer 2-%-Koffein-Creme über zwölf Wochen ab, unter Placebo nicht.[^fs-creme] Eine andere Studie mit einer Mischlotion fand keinen Unterschied.[^fs-lotion]
+- **Glycyrrhetinsäure-Creme (Wirkstoff aus Süßholz):** Achtzehn Frauen testeten eine 2,5-%-Creme; nach einem Monat maß der Ultraschall am behandelten Oberschenkel weniger Fett als am unbehandelten. Es gibt nur diese eine kleine Studie.[^fs-glycyrrhetin] Lakritze essen ist kein Ersatz: Das erhöht den Blutdruck.
+
+### Nahrungsergänzung: erst nach Rücksprache
+
+| Mittel | Idee dahinter | Stand | Vorsicht |
+|---|---|---|---|
+| Omega-3-Kapseln (3 bis 4 g täglich) | Triglyzeride senken | Senkt Triglyzeride um etwa 30 %[^fs-omega3] | In hoher Dosis ärztlich begleiten |
+| Berberin | Aktiviert den Energiesensor AMPK | Senkt LDL und Triglyzeride leicht; Studien von geringer Qualität[^fs-berberin] | Magen-Darm, Wechselwirkungen mit Medikamenten |
+| Forskolin | Regt die Bildung des Botenstoffs cAMP an, der den Fettabbau auslöst | Drei kleine Studien, widersprüchlich[^fs-forskolin] | Blutdruck, Blutverdünner |
+
+### Besser lassen
+
+- **Grüntee-Extrakt in Kapseln:** Ab 800 mg EGCG pro Tag sieht die EU-Lebensmittelbehörde Zeichen von Leberschäden.[^fs-egcg]
+- **Kurkuma-Kapseln in hoher Dosis:** In einem US-Register stehen zehn Fälle von Leberschäden, einer davon tödlich. Als Gewürz unbedenklich.[^fs-kurkuma]
+- **Rotschimmelreis:** Enthält einen natürlichen Statin-Wirkstoff. In der EU gilt seit 2022 eine Obergrenze von unter 3 mg pro Tag, ein vollständiges Verbot liegt als Entwurf vor.[^fs-rotreis] Wenn ein Statin, dann ärztlich verordnet und kontrolliert.
+- **Apfelessig:** [Redaktioneller Vorschlag] Liefert Acetat, also den Stoff, über den Alkohol den Fettabbau bremst.[^fs-acetat] Die Mengen sind klein, ein Nutzen ist aber nicht zu erwarten.
+- **Yohimbin, Synephrin, Clenbuterol, hoch dosiertes Koffein als Pulver:** Herzrasen, Blutdruckkrisen, Rhythmusstörungen.
+- **Hoch dosiertes Niacin:** hemmt den Fettabbau.
+
+### Wirkung prüfen
+
+**[Redaktioneller Vorschlag]**
+
+1. Ausgangslage festhalten: Triglyzeride, HDL, GGT und Nüchternzucker, dazu Gewicht und Bauchumfang.
+2. Die risikolosen Gewohnheiten gemeinsam beginnen: Essenspausen, wenig Zucker, Bewegung, Schlaf, kein Alkohol. Ihre Wirkung auf die Blutwerte zeigt sich in Wochen.
+3. Alles Weitere einzeln ausprobieren, immer nur eine Sache gleichzeitig.
+4. Nach etwa drei Monaten nachmessen und in die Quartalszeile der [Selbsttests](#fortschritt-messen) eintragen.
+
 ## Fortschritt messen
 
 **Kurzurteil:** Einmal pro Quartal zeigen ein paar einfache Tests, ob die Routinen wirken. Es sind Screening-Werkzeuge aus der Altersmedizin, keine Diagnose; die Richtwerte gelten für Menschen ab 60. Für Jüngere zählt vor allem der eigene Verlauf.[^steadi-chair][^ewgsop2]
@@ -595,7 +665,7 @@ Relevante weitere Bücher des Autors sind unter anderem *HIT-Fitness* und ein ei
 
 ---
 
-*Stand: 3. November 2026. Zusammengeführt aus dem Routinen-Hub und dem quellenkritischen Reverse-Aging-Wiki (Recherchestand 12. Oktober 2026). Keine medizinische Diagnose oder individuelle Therapie- oder Trainingsanweisung.*
+*Stand: 16. November 2026 (Abschnitt Fettstoffwechsel ergänzt; übrige Inhalte Stand 3. November 2026). Zusammengeführt aus dem Routinen-Hub und dem quellenkritischen Reverse-Aging-Wiki (Recherchestand 12. Oktober 2026). Keine medizinische Diagnose oder individuelle Therapie- oder Trainingsanweisung.*
 
 [^toc]: Morawa, öffentliche Buchvorschau, Inhaltsverzeichnis; zusätzlich durch die Themenliste der Styria-Presseinformation plausibilisiert. Zugriff 12.10.2026.
 [^verlag]: Kneipp/Styria, Verlagsseite zu *Reverse Aging*. Zugriff 12.10.2026.
@@ -634,3 +704,30 @@ Relevante weitere Bücher des Autors sind unter anderem *HIT-Fitness* und ein ei
 [^steadi-balance]: Centers for Disease Control and Prevention, STEADI, *Assessment: The 4-Stage Balance Test*, 2017. Zugriff 03.11.2026.
 [^ewgsop2]: Cruz-Jentoft, A. J. et al. (2019): *Sarcopenia: revised European consensus on definition and diagnosis* (EWGSOP2). *Age and Ageing*, 48(1), 16–31. Grenzwerte hier nach übereinstimmenden Übersichtstabellen wiedergegeben; der Originalartikel war bei dieser Recherche nicht direkt abrufbar.
 [^nsf]: Hirshkowitz, M. et al. (2015): *National Sleep Foundation's updated sleep duration recommendations: final report*. *Sleep Health*, 1(4), 233–243.
+[^fs-fasten]: [Fasten, Insulin und Fettabbau im Fettgewebe](https://pmc.ncbi.nlm.nih.gov/articles/PMC8839160) (Übersichtsarbeit). Zugriff 16.11.2026.
+[^fs-lpl]: [Insulin und Lipoproteinlipase in Fettgewebe und Muskel](https://jci.org/references/scholar/21411/B47), *Journal of Clinical Investigation*. Zugriff 16.11.2026.
+[^fs-zucker]: [Gesüßte Getränke und Fettneubildung in der Leber](https://boris-portal.unibe.ch/handle/20.500.12422/66579), randomisierte Studie an gesunden Männern. Zugriff 16.11.2026.
+[^fs-zucker2]: [Gesüßte Getränke, Blutfette und Harnsäure](https://pmc.ncbi.nlm.nih.gov/articles/PMC8530743). Zugriff 16.11.2026.
+[^fs-nachessen]: [Bewegung nach dem Essen und Fettverteilung](https://insight.jci.org/articles/view/181553/ga), *JCI Insight* 2026 (Tierdaten). Zugriff 16.11.2026.
+[^fs-schlaf]: [Schlafmangel und Insulinwirkung an Fettzellen](https://pmc.ncbi.nlm.nih.gov/articles/PMC4435718). Zugriff 16.11.2026.
+[^fs-omega3]: [Omega-3-Fettsäuren und Triglyzeride](https://pmc.ncbi.nlm.nih.gov/articles/PMC3563284). Zugriff 16.11.2026.
+[^fs-anp]: [Natriuretische Peptide, Bewegung und Fettabbau](https://www.hal.inserm.fr/inserm-00409147). Zugriff 16.11.2026.
+[^fs-koffein]: [Koffein und freie Fettsäuren beim Menschen](https://pmc.ncbi.nlm.nih.gov/articles/PMC2270224). Zugriff 16.11.2026.
+[^fs-efsa]: EFSA: [Scientific Opinion on the safety of caffeine](https://efsa.europa.eu/en/efsajournal/pub/4102); Koffeingehalte nach [EUFIC](https://eufic.org/en/whats-in-food/article/efsa-opinion-on-the-safety-of-caffeine). Zugriff 16.11.2026.
+[^fs-tee]: [Tee-Catechine, Koffein und Fettverbrennung](https://pubmed.ncbi.nlm.nih.gov/21366839/) (Metaanalyse). Zugriff 16.11.2026.
+[^fs-kaelte]: [Kaltes Wasser und Noradrenalin](https://dx.doi.org/10.1007/s004210050065), *European Journal of Applied Physiology*. Zugriff 16.11.2026.
+[^fs-braun]: [Kälte, Capsinoide und braunes Fett](https://www.jci.org/articles/view/67803/figure/1), *Journal of Clinical Investigation*. Zugriff 16.11.2026.
+[^fs-chili]: [Capsinoide und Energieverbrauch](https://pubmed.ncbi.nlm.nih.gov/22378725/). Zugriff 16.11.2026.
+[^fs-muskel]: [Durchblutung und Fettabbau im Unterhautfett über arbeitenden Muskeln](https://test01.ku.dk/:obvius/pureproxy/3974268/en/publications/are-blood-flow-and-lipolysis-in-subcutaneous-adipose-tissue-influ). Zugriff 16.11.2026.
+[^fs-alkohol]: Siler et al. (1999): [Fettstoffwechsel nach akutem Alkoholkonsum](https://pubmed.ncbi.nlm.nih.gov/10539756/). Zugriff 16.11.2026.
+[^fs-alkohol-lpl]: Belfrage et al. (1977): [Fettstoffwechsel unter fünf Wochen Alkohol](https://pubmed.ncbi.nlm.nih.gov/15844/). Zugriff 16.11.2026.
+[^fs-alkohol-tg]: Van de Wiel (2012): [Alkohol und Triglyzeride](https://pmc.ncbi.nlm.nih.gov/articles/PMC3179875). Zugriff 16.11.2026.
+[^fs-creme]: [Koffein-Creme, Doppelblindstudie 2026](https://pmc.ncbi.nlm.nih.gov/articles/PMC12944369/). Zugriff 16.11.2026.
+[^fs-lotion]: [Mischlotion ohne Effekt auf die Fettdicke](https://biomed.reviewer.ly/app/publication/eb34ece5-cef6-4062-92fb-1ed40586f5f2). Zugriff 16.11.2026.
+[^fs-glycyrrhetin]: [Glycyrrhetinsäure-Creme am Oberschenkel](https://research.unipd.it/handle/11577/2470258); zur Lakritze: [Wirkung auf Körperfett und Blutdruck](https://unifind.unipd.it/resource/item/121393). Zugriff 16.11.2026.
+[^fs-berberin]: [Berberin: Zusammenfassung der Metaanalysen](https://superpower.com/guides/blood-sugar-metabolic-supplements/berberine) (Sekundärquelle); [Berberin bei Fettleber](https://pubmed.ncbi.nlm.nih.gov/38429794/). Zugriff 16.11.2026.
+[^fs-forskolin]: [Forskolin: Übersicht der Studien](https://examine.com/supplements/coleus-forskohlii/faq/could-coleus-forskohlii-help-with-weight-loss-or-body-composition) (Sekundärquelle). Zugriff 16.11.2026.
+[^fs-egcg]: EFSA: [Bewertung der Grüntee-Catechine](https://www.efsa.europa.eu/en/press/news/180418). Zugriff 16.11.2026.
+[^fs-kurkuma]: [Kurkuma und Leberschäden, US-Register](https://pubmed.ncbi.nlm.nih.gov/36252717/). Zugriff 16.11.2026.
+[^fs-rotreis]: [Rotschimmelreis: EU-Regelung und Verbotsentwurf](https://www.freyrsolutions.com/consumer-industry-news/eu-draft-regulation-proposes-complete-ban-on-monacolins-from-red-yeast-rice-in-foods-and-supplements) (Sekundärquelle). Zugriff 16.11.2026.
+[^fs-acetat]: Jocken et al. (2018): [Acetat und Lipolyse in menschlichen Fettzellen](https://frontiersin.org/articles/10.3389/fendo.2017.00372/pdf). Zugriff 16.11.2026.

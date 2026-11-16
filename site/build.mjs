@@ -1,4 +1,4 @@
-// Reverse Aging Routinen – Build für den Routinen-Hub (mehrere kurze Seiten in einer Datei).
+// reverse-aging – Build für den Routinen-Hub (mehrere kurze Seiten in einer Datei).
 // Quelle der Texte: content.md · Kurzfassungen/Karten: hub.json · Aussehen: styles.css · Verhalten: site.js
 import fs from 'node:fs';
 import path from 'node:path';

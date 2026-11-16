@@ -13,7 +13,7 @@
 set -uo pipefail
 
 # ---- Projektkonfiguration -----------------------------------------------------------------
-PROJEKT="Reverse Aging Routinen"
+PROJEKT="reverse-aging"
 REPO="ernesto-earth/reverse-aging"                 # GitHub owner/name
 SITE_URL="http://heger.earth/reverse-aging/"
 ERWARTET_HTTP="200"        # 200 öffentlich, 401 bei Passwortschutz
