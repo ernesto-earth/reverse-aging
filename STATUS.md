@@ -5,16 +5,16 @@ Alleinige aktuelle Statusquelle dieses registrierten Projekts. Historische Abnah
 | Feld | Wert |
 |---|---|
 | Projekt | reverse-aging |
-| Arbeitsstatus | Unterseite Fettstoffwechsel ergänzt und Projekt auf reverse-aging umbenannt; Veröffentlichung am 2026-11-16 von Ernesto beauftragt. |
-| Letzte Statusaktualisierung | 2026-11-16T17:24:37+01:00 |
+| Arbeitsstatus | Unterseite Fettstoffwechsel veröffentlicht; Projekt heißt jetzt reverse-aging. |
+| Letzte Statusaktualisierung | 2026-11-16T17:43:59+01:00 |
 | Zuletzt erledigt | Neue Unterseite Fettstoffwechsel (allgemeine Fassung, nur Routinen) in site/content.md und site/hub.json; Projekt und Ordner von „Routinen“ auf „reverse-aging“ umbenannt; Ordner Fettstoffwechsel bleibt lokal. |
 | Nächster Schritt | Chief-of-Staff-Register (PROJEKTE.json) auf den neuen Ordnerpfad und Projektnamen nachziehen; fachliche Durchsicht der Fettstoffwechsel-Seite durch Ernesto. |
 | Offene Entscheidung | Fachliche Durchsicht des neuen Pfads A (Dosierungen sind redaktionell) durch Ernesto offen. Werte von WHO und EWGSOP2 nach übereinstimmenden Übersichten von Ernesto am 2026-11-03 akzeptiert (Hinweis bleibt in der Fußnote). |
 | Inhaltsstand | offen: Die neue Unterseite Fettstoffwechsel mit 27 Nachweisen ist aus einer Literaturrecherche übernommen und von Ernesto noch nicht fachlich durchgesehen. |
 | Prüfstand | geprüft: Build am 2026-11-16 fehlerfrei (8 Seiten, 64 Nachweise), kein fehlender Nachweis, keine persönlichen Angaben im Seitentext. |
-| Site-Stand | offen: Veröffentlichung dieses Stands am 2026-11-16 beauftragt; die Live-Prüfung folgt nach dem Deploy. |
+| Site-Stand | veröffentlicht: Commit 0ef457c ist seit 2026-11-16 live, die Unterseite Fettstoffwechsel wurde im Browser geprüft. |
 | Site-Projekt-ID | GitHub ernesto-earth/reverse-aging |
-| Site-Version | 77bec4e · 2026-11-07T08:24:00.046Z (version.json live geprüft; Action success) |
+| Site-Version | 0ef457c · 2026-11-16 (Action-Lauf 43910391132 success; Push durch Ernesto, Live-Seite im Browser geprüft) |
 | Site-URL | http://heger.earth/reverse-aging/ (Link auch als .webloc im Ordner) |
 | Zuletzt aktualisiert durch | Claude, Auftrag von Ernesto am 2026-11-16 (Fettstoffwechsel-Seite, Umbenennung, Veröffentlichung) |
 
