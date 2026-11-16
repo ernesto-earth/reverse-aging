@@ -6,9 +6,9 @@ Alleinige aktuelle Statusquelle dieses registrierten Projekts. Historische Abnah
 |---|---|
 | Projekt | reverse-aging |
 | Arbeitsstatus | Unterseite Fettstoffwechsel veröffentlicht; Projekt heißt jetzt reverse-aging. |
-| Letzte Statusaktualisierung | 2026-11-16T17:43:59+01:00 |
+| Letzte Statusaktualisierung | 2026-11-16T18:10:15+01:00 |
 | Zuletzt erledigt | Neue Unterseite Fettstoffwechsel (allgemeine Fassung, nur Routinen) in site/content.md und site/hub.json; Projekt und Ordner von „Routinen“ auf „reverse-aging“ umbenannt; Ordner Fettstoffwechsel bleibt lokal. |
-| Nächster Schritt | Chief-of-Staff-Register (PROJEKTE.json) auf den neuen Ordnerpfad und Projektnamen nachziehen; fachliche Durchsicht der Fettstoffwechsel-Seite durch Ernesto. |
+| Nächster Schritt | Fachliche Durchsicht der Fettstoffwechsel-Seite durch Ernesto; Hermes und GitHub Desktop auf den neuen Ordnerpfad prüfen. |
 | Offene Entscheidung | Fachliche Durchsicht des neuen Pfads A (Dosierungen sind redaktionell) durch Ernesto offen. Werte von WHO und EWGSOP2 nach übereinstimmenden Übersichten von Ernesto am 2026-11-03 akzeptiert (Hinweis bleibt in der Fußnote). |
 | Inhaltsstand | offen: Die neue Unterseite Fettstoffwechsel mit 27 Nachweisen ist aus einer Literaturrecherche übernommen und von Ernesto noch nicht fachlich durchgesehen. |
 | Prüfstand | geprüft: Build am 2026-11-16 fehlerfrei (8 Seiten, 64 Nachweise), kein fehlender Nachweis, keine persönlichen Angaben im Seitentext. |
