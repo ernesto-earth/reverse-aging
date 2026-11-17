@@ -5,20 +5,28 @@ Alleinige aktuelle Statusquelle dieses registrierten Projekts. Historische Abnah
 | Feld | Wert |
 |---|---|
 | Projekt | reverse-aging |
-| Arbeitsstatus | aktiv; Kopfleiste um den Rückweg zum Cockpit ergänzt, fachliche Durchsicht der Unterseite Fettstoffwechsel bleibt offen. |
-| Letzte Statusaktualisierung | 2026-11-17T14:44:50+01:00 |
+| Arbeitsstatus | aktiv; Fettstoffwechsel-Seite als Fassung 1.0 freigegeben, Kopfleiste um den Rückweg zum Cockpit ergänzt. |
+| Letzte Statusaktualisierung | 2026-11-17T15:10:38+01:00 |
 | Zuletzt erledigt | Signalzeichen zurück zum Cockpit links in der Kopfleiste ergänzt und veröffentlicht (Commit b19433a, Action-Lauf 44082950030). |
-| Nächster Schritt | Fachliche Durchsicht der Fettstoffwechsel-Seite durch Ernesto; Hermes und GitHub Desktop auf den neuen Ordnerpfad prüfen. |
-| Offene Entscheidung | Fachliche Durchsicht des neuen Pfads A (Dosierungen sind redaktionell) durch Ernesto offen. Werte von WHO und EWGSOP2 nach übereinstimmenden Übersichten von Ernesto am 2026-11-03 akzeptiert (Hinweis bleibt in der Fußnote). |
-| Inhaltsstand | offen: Die neue Unterseite Fettstoffwechsel mit 27 Nachweisen ist aus einer Literaturrecherche übernommen und von Ernesto noch nicht fachlich durchgesehen. |
+| Nächster Schritt | Hermes und GitHub Desktop auf den neuen Ordnerpfad prüfen. |
+| Offene Entscheidung | keine fachliche Entscheidung offen. Freigabe der Fettstoffwechsel-Seite als Fassung 1.0 durch Ernesto am 17.11.2026; Werte von WHO und EWGSOP2 bereits am 2026-11-03 akzeptiert, Hinweis bleibt in der Fußnote. |
+| Inhaltsstand | geprüft: Unterseite Fettstoffwechsel am 17.11.2026 von Ernesto als Fassung 1.0 freigegeben; die Dosierungen auf Pfad A bleiben ausdrücklich redaktionelle Vorschläge und sind in der Fußnote so gekennzeichnet. |
 | Prüfstand | geprüft: Seitenbau am 17.11.2026 lokal erfolgreich durchlaufen; die Deploy-Action 44082950030 ist mit success abgeschlossen. |
 | Site-Stand | veröffentlicht: http://heger.earth/reverse-aging/ aus Commit b19433a, Action-Lauf 44082950030 erfolgreich am 17.11.2026 um 13:26 Wiener Zeit. |
 | Site-Projekt-ID | GitHub ernesto-earth/reverse-aging |
 | Site-Version | b19433a / 2026-11-17T12:26:00Z |
 | Site-URL | http://heger.earth/reverse-aging/ (Link auch als .webloc im Ordner) |
-| Zuletzt aktualisiert durch | Claude im Auftrag Ernestos vom 2026-11-17; nur Kopfleiste, Stildatei und diese Statusquelle geändert. |
+| Zuletzt aktualisiert durch | Claude im Auftrag Ernestos vom 2026-11-17; die Freigabe ist Ernestos Entscheidung, am Seiteninhalt wurde nichts geändert. |
 
 ## Belege
+
+### Freigabe der Fettstoffwechsel-Seite als Fassung 1.0, 17.11.2026
+
+Ernesto hat die am 16.11.2026 veröffentlichte Unterseite durchgesehen und für eine
+Fassung 1.0 freigegeben. Am Text, an den 27 Nachweisen und an den Herkunftskennzeichnungen
+wurde dabei nichts geändert. Die Dosierungsangaben auf Pfad A bleiben redaktionelle
+Vorschläge ohne eigenen Beleg; die entsprechende Kennzeichnung in der Fußnote bleibt
+bestehen. Eine spätere Fassung kann sie durch belegte Werte ersetzen.
 
 ### Rückweg zum Cockpit, 17.11.2026
 
