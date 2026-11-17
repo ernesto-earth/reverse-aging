@@ -6,10 +6,10 @@ Alleinige aktuelle Statusquelle dieses registrierten Projekts. Historische Abnah
 |---|---|
 | Projekt | reverse-aging |
 | Arbeitsstatus | aktiv; Fettstoffwechsel-Seite als Fassung 1.0 freigegeben, Kopfleiste um den Rückweg zum Cockpit ergänzt. |
-| Letzte Statusaktualisierung | 2026-11-17T15:10:38+01:00 |
+| Letzte Statusaktualisierung | 2026-11-17T15:36:38+01:00 |
 | Zuletzt erledigt | Signalzeichen zurück zum Cockpit links in der Kopfleiste ergänzt und veröffentlicht (Commit b19433a, Action-Lauf 44082950030). |
 | Nächster Schritt | Hermes und GitHub Desktop auf den neuen Ordnerpfad prüfen. |
-| Offene Entscheidung | keine fachliche Entscheidung offen. Freigabe der Fettstoffwechsel-Seite als Fassung 1.0 durch Ernesto am 17.11.2026; Werte von WHO und EWGSOP2 bereits am 2026-11-03 akzeptiert, Hinweis bleibt in der Fußnote. |
+| Offene Entscheidung | keine |
 | Inhaltsstand | geprüft: Unterseite Fettstoffwechsel am 17.11.2026 von Ernesto als Fassung 1.0 freigegeben; die Dosierungen auf Pfad A bleiben ausdrücklich redaktionelle Vorschläge und sind in der Fußnote so gekennzeichnet. |
 | Prüfstand | geprüft: Seitenbau am 17.11.2026 lokal erfolgreich durchlaufen; die Deploy-Action 44082950030 ist mit success abgeschlossen. |
 | Site-Stand | veröffentlicht: http://heger.earth/reverse-aging/ aus Commit b19433a, Action-Lauf 44082950030 erfolgreich am 17.11.2026 um 13:26 Wiener Zeit. |
@@ -19,6 +19,13 @@ Alleinige aktuelle Statusquelle dieses registrierten Projekts. Historische Abnah
 | Zuletzt aktualisiert durch | Claude im Auftrag Ernestos vom 2026-11-17; die Freigabe ist Ernestos Entscheidung, am Seiteninhalt wurde nichts geändert. |
 
 ## Belege
+
+### Offene Entscheidung geschlossen, 17.11.2026
+
+Mit der Freigabe der Fettstoffwechsel-Seite als Fassung 1.0 ist keine fachliche
+Entscheidung mehr offen. Die früheren Angaben bleiben als Beleg erhalten: Werte von
+WHO und EWGSOP2 am 2026-11-03 von Ernesto akzeptiert, Hinweis dazu in der Fußnote;
+die Dosierungen auf Pfad A bleiben redaktionelle Vorschläge.
 
 ### Freigabe der Fettstoffwechsel-Seite als Fassung 1.0, 17.11.2026
 
