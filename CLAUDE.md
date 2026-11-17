@@ -8,8 +8,19 @@ Ausführliche Anleitung: `README.md`. Aktueller Stand: `STATUS.md`. Sprache im P
 - **Das Repo ist öffentlich.** Keine persönlichen Gesundheitsangaben, Namen, Zugangsdaten oder Tokens
   in Dateien, Commits oder Seitentext. `.gitignore` nicht aufweichen (u. a. `Fettstoffwechsel/`, `Chats/`, `archiv/`).
 - Jeder Push auf `main`, der `site/**` berührt, veröffentlicht die Seite automatisch (`.github/workflows/deploy.yml`).
-  In Cloud-Sitzungen deshalb nur auf dem zugewiesenen Arbeitszweig arbeiten; auf `main` kommt es erst nach Freigabe durch Ernesto.
-- `veroeffentlichen.sh` ist für den Mac (Hermes, E-024) gedacht, pusht direkt auf `main` und nicht in Cloud-Sitzungen ausführen.
+- Claude verwaltet Git selbst: Änderungen auf dem Arbeitszweig committen und pushen.
+  **Auf `main` (= Deploy nach heger.earth) nur, wenn Ernesto es ausdrücklich sagt** („deploy“, „veröffentlichen“).
+- `veroeffentlichen.sh` ist für den Mac (Hermes, E-024), nicht in Cloud-Sitzungen ausführen.
+
+## Deploy in einer Cloud-Sitzung (nur auf Ansage)
+
+1. `cd site && node build.mjs --assets` muss fehlerfrei sein; `STATUS.md` nachziehen und committen.
+2. `git fetch origin main`, Arbeitszweig auf `origin/main` bringen (merge, kein Force-Push), dann `git push origin HEAD:main`.
+3. Lauf des Workflows `deploy.yml` für genau diesen Commit beobachten (GitHub-MCP `actions_list`, bei Fehler `get_job_logs`).
+   Der Workflow prüft selbst die Live-Seite (`deploy-pruefen.mjs`): grüner Lauf = online, Live-Commit stimmt.
+   heger.earth ist aus der Cloud-Sitzung nicht direkt erreichbar (nur http, Netzwerkregel); das ist so gewollt.
+4. Ernesto Commit, Action-Lauf und Ergebnis melden; Site-Felder in `STATUS.md` beim nächsten Commit nachtragen.
+   Fehlgeschlagenen Lauf nicht blind neu starten, sondern Ursache melden.
 
 ## Seite bearbeiten
 
