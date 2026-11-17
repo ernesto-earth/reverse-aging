@@ -309,6 +309,7 @@ const html = `<!doctype html>
 <a class="skip" href="#main">Zum Inhalt</a>
 <header class="topbar">
   <div class="topbar-inner">
+    <a class="cos" href="https://www.heger.earth/cos/#/uebersicht" aria-label="Zum Cockpit" title="Zum Cockpit"><i></i><i></i></a>
     <a class="brand" href="#ueberblick">REVERSE AGING <span>ROUTINEN</span></a>
     <nav class="topnav" aria-label="Hauptnavigation">${topNav}</nav>
     <span class="stand">${esc(hub.standShort)}</span>
