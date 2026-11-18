@@ -6,9 +6,9 @@ Alleinige aktuelle Statusquelle dieses registrierten Projekts. Historische Abnah
 |---|---|
 | Projekt | reverse-aging |
 | Arbeitsstatus | aktiv; seit E-035 Vorprod (heger.earth/vorprod/reverse-aging/) und Prod (heger.earth/reverse-aging/), Fettstoffwechsel-Seite Fassung 1.0. |
-| Letzte Statusaktualisierung | 2026-11-18T19:58:00+01:00 |
+| Letzte Statusaktualisierung | 2026-11-18T20:04:00+01:00 |
 | Zuletzt erledigt | 18.11.2026: E-035 umgesetzt – Workflow main → Vorprod, prod → live, veroeffentlichen.sh mit --freigeben. E-036: Repo und Seite bleiben öffentlich. Danach Freigabeprüfung angepasst: Bei reinen Doku-/Statuscommits gilt der zuletzt ausgelieferte, inhaltlich gleiche Commit (fee705f), auf Vorprod und Prod veröffentlicht. |
-| Nächster Schritt | Keiner beauftragt. Hermes-Pfad und GitHub Desktop sind mit E-035 geklärt (Git-Daten verlegt, GitHub Desktop am MacBook getrennt). |
+| Nächster Schritt | Kein offener Schritt – alles Beauftragte ist erledigt. |
 | Offene Entscheidung | keine |
 | Inhaltsstand | geprüft: Unterseite Fettstoffwechsel am 17.11.2026 von Ernesto als Fassung 1.0 freigegeben; die Dosierungen auf Pfad A bleiben ausdrücklich redaktionelle Vorschläge und sind in der Fußnote so gekennzeichnet. |
 | Prüfstand | geprüft: Deployment-Tests (32/32) und Seitenbau in den Actions bestanden; Prod-Deploy 44303770351 am 18.11.2026 success, Live-Version fee705f bestätigt. |
