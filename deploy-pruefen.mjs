@@ -2,8 +2,10 @@
 import { pathToFileURL } from 'node:url';
 
 const hosts = new Set(['heger.earth', 'www.heger.earth']);
+// E-035: Vorprod liegt unter /vorprod/<seite>/; ohne HEGER_PREFIX wird Prod geprüft.
+const prefix = process.env.HEGER_PREFIX === 'vorprod/' ? 'vorprod/' : '';
 const redirects = new Set([301, 302, 303, 307, 308]);
-const path = '/reverse-aging/';
+const path = '/' + prefix + 'reverse-aging/';
 
 function checkedUrl(value) {
   const url = new URL(value);
@@ -32,7 +34,7 @@ async function resolveAnonymous(entry, fetchImpl) {
   throw new Error('Prüfziel nicht ermittelt.');
 }
 
-export async function checkPublic({ expectedCommit, fetchImpl = fetch, entry = 'http://heger.earth/reverse-aging/' } = {}) {
+export async function checkPublic({ expectedCommit, fetchImpl = fetch, entry = 'http://heger.earth/' + prefix + 'reverse-aging/' } = {}) {
   if (!/^[0-9a-f]{40}$/.test(expectedCommit || '')) throw new Error('Ungültiger erwarteter Commit.');
   const target = await resolveAnonymous(entry, fetchImpl);
   if (target.status !== 200) throw new Error(`Reverse-Aging-Seite: HTTP ${target.status} statt 200.`);

@@ -1,5 +1,6 @@
 # Baut die Seite „Reverse Aging – Routinen“ aus site/ und lädt sie nach heger.earth/reverse-aging hoch.
-# Läuft bei jedem Push auf main, der die Seite oder diesen Workflow ändert,
+# E-035: Push auf main → Vorprod heger.earth/vorprod/reverse-aging/, Push auf prod → heger.earth/reverse-aging/.
+# Läuft bei jedem Push auf main oder prod, der die Seite oder diesen Workflow ändert,
 # oder manuell über "Actions → Deploy → Run workflow".
 #
 # Benötigte Repository-Secrets (Settings → Secrets and variables → Actions):
@@ -16,16 +17,19 @@ name: Deploy
 
 on:
   push:
-    branches: [main]
+    branches: [main, prod]
     paths: ["site/**", ".github/workflows/deploy.yml", "deploy-pruefen.mjs", "test-deploy-pruefen.mjs"]
   workflow_dispatch:
 
 concurrency:
-  group: deploy
+  group: deploy-${{ github.ref_name }}
   cancel-in-progress: false
 
 env:
   SITE: reverse-aging
+  # E-035: main → Vorprod (/vorprod/<seite>/), prod → live. Freigabe = prod auf geprüften main-Commit vorspulen.
+  PREFIX: ${{ github.ref_name == 'prod' && '' || 'vorprod/' }}
+  HEGER_PREFIX: ${{ github.ref_name == 'prod' && '' || 'vorprod/' }}
 
 jobs:
   deploy:
@@ -59,6 +63,25 @@ jobs:
       - name: lftp installieren
         run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
 
+      - name: Vorprod vor Suchmaschinen verbergen (E-035)
+        if: env.PREFIX == 'vorprod/'
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          LFTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_PORT: ${{ vars.FTP_PORT || '21' }}
+          FTP_WEBROOT: ${{ vars.FTP_WEBROOT || 'www/' }}
+        run: |
+          set -euo pipefail
+          printf '<IfModule mod_headers.c>\n  Header set X-Robots-Tag "noindex, nofollow"\n</IfModule>\n' > "$RUNNER_TEMP/vorprod.htaccess"
+          printf 'User-agent: *\nDisallow: /\n' > "$RUNNER_TEMP/robots.txt"
+          server=$(echo "$FTP_SERVER" | tr -d '[:space:]')
+          lftp -c "set ftp:ssl-force true; set ftp:ssl-protect-data true; set ftp:passive-mode true; \
+            set net:max-retries 3; set net:timeout 30; \
+            open --env-password -u $FTP_USERNAME -p $FTP_PORT $server; \
+            mkdir -p -f ${FTP_WEBROOT}vorprod; put $RUNNER_TEMP/vorprod.htaccess -o ${FTP_WEBROOT}vorprod/.htaccess; \
+            put $RUNNER_TEMP/robots.txt -o ${FTP_WEBROOT}vorprod/robots.txt; bye"
+
       - name: Hochladen (FTPS)
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
@@ -72,10 +95,10 @@ jobs:
           lftp -c "set ftp:ssl-force true; set ftp:ssl-protect-data true; set ftp:passive-mode true; \
             set net:max-retries 3; set net:timeout 30; \
             open --env-password -u $FTP_USERNAME -p $FTP_PORT $server; \
-            mirror --reverse --verbose --no-perms --parallel=2 site/dist/ ${FTP_WEBROOT}${SITE}/; bye"
+            mirror --reverse --verbose --no-perms --parallel=2 site/dist/ ${FTP_WEBROOT}${PREFIX}${SITE}/; bye"
 
       - name: Prüfen, ob die Seite erreichbar ist
         run: |
           sleep 3
           # Bestehende Weiterleitungen ohne Zugangsdaten prüfen; Version am geprüften Ziel abgleichen.
-          node deploy-pruefen.mjs "$GITHUB_SHA" "http://heger.earth/${SITE}/"
+          node deploy-pruefen.mjs "$GITHUB_SHA" "http://heger.earth/${PREFIX}${SITE}/"
