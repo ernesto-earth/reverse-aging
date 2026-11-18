@@ -3,6 +3,11 @@
 Seite „Reverse Aging – Routinen“ aus `site/`. Antworten und Commits auf Deutsch. Einstieg: `README.md`, Stand: `STATUS.md`.
 Vorprod: http://heger.earth/vorprod/reverse-aging/ · Prod: http://heger.earth/reverse-aging/. Prüfen: `cd site && node build.mjs --assets`.
 
+**Öffentlich, ohne Passwort – endgültig (E-036, Ernesto 2026-11-18):** Das Repo `ernesto-earth/reverse-aging` bleibt
+public, die Seite (Prod und Vorprod) ist ohne Passwort lesbar. Nicht auf privat stellen, keinen Passwortschutz und keine
+solche Rückfrage vorschlagen. Deshalb nur Veröffentlichbares ins Repo; nie einchecken: `Fettstoffwechsel/` (persönliche
+Gesundheitsrecherche), PDFs aus Zeitschriften, `Chats/`, `archiv/` – siehe `.gitignore`.
+
 ## Git, Vorprod und Prod (E-035, gilt für Claude und Hermes gleich)
 
 Beschluss: `ENTSCHEIDUNGEN.md` im Repo `ernesto-earth/chief-of-staff`, E-035.
