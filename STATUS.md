@@ -5,13 +5,13 @@ Alleinige aktuelle Statusquelle dieses registrierten Projekts. Historische Abnah
 | Feld | Wert |
 |---|---|
 | Projekt | reverse-aging |
-| Arbeitsstatus | aktiv; Fettstoffwechsel-Seite als Fassung 1.0 freigegeben, Kopfleiste um den Rückweg zum Cockpit ergänzt. |
-| Letzte Statusaktualisierung | 2026-11-17T15:36:38+01:00 |
-| Zuletzt erledigt | Signalzeichen zurück zum Cockpit links in der Kopfleiste ergänzt und veröffentlicht (Commit b19433a, Action-Lauf 44082950030). |
-| Nächster Schritt | Hermes und GitHub Desktop auf den neuen Ordnerpfad prüfen. |
+| Arbeitsstatus | aktiv; seit E-035 Vorprod (heger.earth/vorprod/reverse-aging/) und Prod (heger.earth/reverse-aging/), Fettstoffwechsel-Seite Fassung 1.0. |
+| Letzte Statusaktualisierung | 2026-11-18T12:15:00+01:00 |
+| Zuletzt erledigt | 18.11.2026: E-035 umgesetzt – Workflow main → Vorprod, prod → live, veroeffentlichen.sh mit --freigeben. Live auf Commit 3e4b27c (Action 44289224514, success). E-036: Repo und Seite bleiben öffentlich. |
+| Nächster Schritt | Keiner beauftragt. Hermes-Pfad und GitHub Desktop sind mit E-035 geklärt (Git-Daten verlegt, GitHub Desktop am MacBook getrennt). |
 | Offene Entscheidung | keine |
 | Inhaltsstand | geprüft: Unterseite Fettstoffwechsel am 17.11.2026 von Ernesto als Fassung 1.0 freigegeben; die Dosierungen auf Pfad A bleiben ausdrücklich redaktionelle Vorschläge und sind in der Fußnote so gekennzeichnet. |
-| Prüfstand | geprüft: Seitenbau am 17.11.2026 lokal erfolgreich durchlaufen; die Deploy-Action 44082950030 ist mit success abgeschlossen. |
+| Prüfstand | geprüft: Deployment-Tests und Seitenbau in den Actions bestanden; Prod-Deploy 44289224514 am 18.11.2026 success, Live-Version 3e4b27c bestätigt. |
 | Site-Stand | veröffentlicht: http://heger.earth/reverse-aging/ aus Commit b19433a, Action-Lauf 44082950030 erfolgreich am 17.11.2026 um 13:26 Wiener Zeit. |
 | Site-Projekt-ID | GitHub ernesto-earth/reverse-aging |
 | Site-Version | b19433a / 2026-11-17T12:26:00Z |
