@@ -34,8 +34,11 @@ async function resolveAnonymous(entry, fetchImpl) {
   throw new Error('Prüfziel nicht ermittelt.');
 }
 
-export async function checkPublic({ expectedCommit, fetchImpl = fetch, entry = 'http://heger.earth/' + prefix + 'reverse-aging/' } = {}) {
+// erlaubt: weitere Commits, die als ausgeliefert gelten (E-035: seit dem letzten seitenrelevanten Commit
+// nur Dateien außerhalb der Seite geändert). Ohne Angabe gilt nur genau `expectedCommit`.
+export async function checkPublic({ expectedCommit, erlaubt = [expectedCommit], fetchImpl = fetch, entry = 'http://heger.earth/' + prefix + 'reverse-aging/' } = {}) {
   if (!/^[0-9a-f]{40}$/.test(expectedCommit || '')) throw new Error('Ungültiger erwarteter Commit.');
+  if (!Array.isArray(erlaubt) || !erlaubt.length || !erlaubt.every(c => /^[0-9a-f]{40}$/.test(c || ''))) throw new Error('Ungültige erlaubte Commits.');
   const target = await resolveAnonymous(entry, fetchImpl);
   if (target.status !== 200) throw new Error(`Reverse-Aging-Seite: HTTP ${target.status} statt 200.`);
   const versionUrl = new URL('version.json', target.url);
@@ -48,7 +51,7 @@ export async function checkPublic({ expectedCommit, fetchImpl = fetch, entry = '
     throw new Error(`Live-Version: HTTP ${response.status} statt 200; keine weitere Weiterleitung.`);
   }
   const version = await response.json();
-  if (!/^[0-9a-f]{40}$/.test(version?.commit || '') || version.commit !== expectedCommit) {
+  if (!/^[0-9a-f]{40}$/.test(version?.commit || '') || !erlaubt.includes(version.commit)) {
     throw new Error('Live-Commit stimmt nicht mit dem gepushten Commit überein.');
   }
   if (typeof version.deployed_at !== 'string' || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[+-]\d{2}:\d{2})$/.test(version.deployed_at) || !Number.isFinite(Date.parse(version.deployed_at))) {
@@ -59,7 +62,8 @@ export async function checkPublic({ expectedCommit, fetchImpl = fetch, entry = '
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   try {
-    const result = await checkPublic({ expectedCommit: process.argv[2], ...(process.argv[3] ? { entry: process.argv[3] } : {}) });
+    const commits = (process.argv[2] || '').split(',');
+    const result = await checkPublic({ expectedCommit: commits[0], erlaubt: commits, ...(process.argv[3] ? { entry: process.argv[3] } : {}) });
     console.log(JSON.stringify(result));
   } catch (error) {
     console.error('PRÜFUNG: FEHLER – ' + error.message);

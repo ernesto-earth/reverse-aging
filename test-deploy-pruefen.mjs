@@ -65,3 +65,20 @@ test('invalid expected commit fails without network', async () => {
 test('network failure propagates', async () => {
   await assert.rejects(checkPublic({ expectedCommit: commit, fetchImpl: async () => { throw new Error('offline'); } }), /offline/);
 });
+test('E-035: live commit from the allowed list is accepted', async () => {
+  const alt = 'b'.repeat(40);
+  const f = fixture([...allowed().slice(0, 2), { status: 200, body: JSON.stringify({ ...version, commit: alt }) }]);
+  const r = await checkPublic({ expectedCommit: commit, erlaubt: [commit, alt], fetchImpl: f.fetchImpl });
+  assert.equal(r.commit, alt);
+});
+test('E-035: live commit outside the allowed list is rejected', async () => {
+  const f = fixture([...allowed().slice(0, 2), { status: 200, body: JSON.stringify({ ...version, commit: 'c'.repeat(40) }) }]);
+  await assert.rejects(checkPublic({ expectedCommit: commit, erlaubt: [commit, 'b'.repeat(40)], fetchImpl: f.fetchImpl }));
+});
+for (const erlaubt of [[], ['a'.repeat(7)], 'x']) {
+  test('E-035: invalid allowed list fails without network: ' + JSON.stringify(erlaubt), async () => {
+    const f = fixture([]);
+    await assert.rejects(checkPublic({ expectedCommit: commit, erlaubt, fetchImpl: f.fetchImpl }));
+    assert.equal(f.calls.length, 0);
+  });
+}

@@ -160,6 +160,14 @@ else
   say "== Prüfe Commit ${sha:0:7} ($(git log -1 --format=%s "$sha"))"
 fi
 
+# E-035: Reine Doku-/Statuscommits lösen keinen Seiten-Deploy aus (Pfadfilter im Deploy-Workflow).
+# Als ausgeliefert gilt dann jeder Commit vom letzten seitenrelevanten Commit bis einschließlich $sha.
+SEITEN_PFADE=(site/ .github/workflows/deploy.yml deploy-pruefen.mjs test-deploy-pruefen.mjs)
+deploy_sha=$(git log -1 --format=%H "$sha" -- "${SEITEN_PFADE[@]}")
+[ -n "$deploy_sha" ] || stop "Kein seitenrelevanter Commit für den Live-Abgleich gefunden."
+erlaubt=$( { echo "$sha"; git rev-list --ancestry-path "$deploy_sha..$sha"; echo "$deploy_sha"; } | awk 'NF && !s[$0]++' | paste -sd, -)
+[ "$deploy_sha" = "$sha" ] || say "== Seit ${deploy_sha:0:7} keine Änderung an der Seite; live darf ${deploy_sha:0:7} oder ein späterer Commit bis ${sha:0:7} sein."
+
 # Den Deploy-Workflow für genau diesen Commit abwarten (öffentlich auch ohne Token).
 token="${COS_GIT_TOKEN:-${GITHUB_TOKEN:-}}"
 api_headers=(-H "Accept: application/vnd.github+json")
@@ -181,13 +189,18 @@ for i in $(seq 1 40); do
   fi
   deploy="Action-Lauf $r_id läuft noch"
 done
+# Kein Lauf für diesen Commit und seit deploy_sha nichts Seitenrelevantes geändert: kein Deploy nötig.
+if [ "$deploy_ok" = 0 ] && [ "$deploy_sha" != "$sha" ] && [ "$deploy" = "kein erfolgreicher Deploy nachgewiesen" ]; then
+  deploy="keine Action ausgelöst (nur Dateien außerhalb der Seite geändert)"; deploy_ok=1
+fi
 [ "$deploy_ok" = 1 ] || stop "Deploy nicht bestätigt: $deploy. Commit ${sha:0:7}; nichts erneut starten."
 say "== Deploy: $deploy"
 
-if ! check=$("$NODE" ./deploy-pruefen.mjs "$sha" "$SITE_URL" 2>&1); then
+if ! check=$("$NODE" ./deploy-pruefen.mjs "$erlaubt" "$SITE_URL" 2>&1); then
   stop "Seiten-/Versionsprüfung fehlgeschlagen ($check). Commit ${sha:0:7} ist gepusht."
 fi
 say "== Live-Abgleich: $check"
 deployed_at=$(printf '%s' "$check" | "$NODE" -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>console.log(JSON.parse(s).deployed_at))') || stop "Prüfergebnis nicht lesbar."
+live_commit=$(printf '%s' "$check" | "$NODE" -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>console.log(JSON.parse(s).commit))') || stop "Prüfergebnis nicht lesbar."
 
-say "ERGEBNIS: veröffentlicht – Commit ${sha:0:7}, deployed_at $deployed_at, $deploy, $SITE_URL HTTP $ERWARTET_HTTP am geprüften Ziel, Live-Commit stimmt überein"
+say "ERGEBNIS: veröffentlicht – Commit ${sha:0:7}, deployed_at $deployed_at, $deploy, $SITE_URL HTTP $ERWARTET_HTTP am geprüften Ziel, Live-Commit ${live_commit:0:7}$( [ "$live_commit" = "$sha" ] && echo " stimmt überein" || echo " inhaltlich gleich (seither nur Dateien außerhalb der Seite geändert)")"
